@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Navigation from './Banner/Navigation';
+import cryptr from './js/encryption';
 
+import Navigation from './Banner/Navigation';
 import NewAssignmentContainer from './Assignments/NewAssignmentContainer';
 
 class App extends Component {
@@ -11,7 +12,9 @@ class App extends Component {
     return (
       <div className="App">
         <Navigation />
-    
+
+        {search.get("path") === "assignment" && <h1>{cryptr.decrypt(window.location.href.split("path=assignment&")[1])}</h1>}
+
         {search.get("path") === "info" && <h1>Info Page</h1>}
         {search.get("path") === "new" && <NewAssignmentContainer />}
         {search.get("path") === "token-checker" && <h1>Token Checker Page</h1>}
