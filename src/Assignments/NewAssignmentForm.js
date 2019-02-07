@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import NewAssignmentOptions from './NewAssignmentOptions';
+import CheckForOptions from './CheckForOptions';
 
 class NewAssignmentForm extends Component {
 
@@ -29,6 +30,7 @@ class NewAssignmentForm extends Component {
                 <input id="answer" type="text" required/><br/>
 
                 <NewAssignmentOptions />
+                <CheckForOptions />
 
                 <input type="submit" value="Generate Assignemtn Link" />
             </form>
