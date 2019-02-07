@@ -22,10 +22,18 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <script src="https://www.noteflight.com/clientapi/2.0.0/nfclient.js"></script>
+    <title>Music Fundamentals (Basic)</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <script>
+      NFClient.init(info => {
+        console.log(`Notelfight Client Version ${info.version} : Ready for Interaction`)
+      })
+    </script>
+
     <div id="root"></div>
     <!--
       This HTML file is a template.

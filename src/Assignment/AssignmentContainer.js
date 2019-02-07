@@ -2,6 +2,8 @@ import React, {Component} from "react";
 
 import cryptr from '../js/encryption';
 
+import NFInteractive from './NFInteractive';
+
 class AssignmentContainer extends Component {
 
     decryptParams(){
@@ -23,6 +25,7 @@ class AssignmentContainer extends Component {
                         <h4>Play Count: {params.playCount == 0 ? "No Limit" : params.playCount }</h4>
                     </div>
                 }
+                <NFInteractive params={params} />
             </div>
             
         )
