@@ -4,7 +4,8 @@ import './App.css';
 import cryptr from './js/encryption';
 
 import Navigation from './Banner/Navigation';
-import NewAssignmentContainer from './Assignments/NewAssignmentContainer';
+import NewAssignmentContainer from './NewAssignments/NewAssignmentContainer';
+import AssignmentContainer from './Assignment/AssignmentContainer';
 
 class App extends Component {
   render() {
@@ -13,7 +14,7 @@ class App extends Component {
       <div className="App">
         <Navigation />
 
-        {search.get("path") === "assignment" && <h1>{cryptr.decrypt(window.location.href.split("path=assignment&")[1])}</h1>}
+        {search.get("path") === "assignment" && <AssignmentContainer />}
 
         {search.get("path") === "info" && <h1>Info Page</h1>}
         {search.get("path") === "new" && <NewAssignmentContainer />}

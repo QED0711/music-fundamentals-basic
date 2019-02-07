@@ -11,11 +11,12 @@ class NewAssignmentForm extends Component {
     handleSubmit(setLink){
         return (e) => {
             e.preventDefault();
+
             const assignment = document.getElementById("assignment").value;
             const answer = document.getElementById("answer").value;
             const type = document.getElementById("assignment-type").value
             
-            const playcount = type === "dictation" ? document.getElementById("play-count").value : null;
+            const playCount = type === "dictation" ? document.getElementById("play-count").value : null;
             const allowPlayback = type === "dictation" ? document.getElementById("allow-playback").checked : null;
 
             const checkFor = [...document.getElementsByClassName("check-for")].map(x => {
@@ -26,9 +27,8 @@ class NewAssignmentForm extends Component {
                 }
             }).filter(x => {if(x) return x})
 
-            console.log({assignment, answer, type, playcount, allowPlayback, checkFor});
-            let path = `http://${window.location.hostname}:3000?path=assignment&`
-            let params = `a=${assignment}&aa=${answer}&type=${type}&checkFor=${checkFor}`
+            let path = `http://${window.location.hostname}:3000?path=assignment&params=`
+            let params = JSON.stringify({assignment, answer, type, playCount, allowPlayback, checkFor})
             
             let encrypted = cryptr.encrypt(params);
 

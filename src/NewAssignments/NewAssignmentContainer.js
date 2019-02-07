@@ -15,6 +15,7 @@ class NewAssignmentContainer extends Component{
     }
 
     setLink(link){
+        console.log("called")
         this.setState({link});
     }
 
@@ -22,7 +23,14 @@ class NewAssignmentContainer extends Component{
         return(
             <div id="new-assignment-container">
                 <NewAssignmentForm setLink={this.setLink}/>
-                {this.state.link && <h4>{this.state.link}</h4>}
+                {this.state.link 
+                && 
+                <div>
+                    <textarea id="copy-link" defaultValue={this.state.link}></textarea>
+                    <br/>
+                    <a href={this.state.link} target="_blank">Preview</a>
+                </div>
+                }
             </div>
         )
     }
