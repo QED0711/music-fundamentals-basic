@@ -9,8 +9,21 @@ class ContentNFInteractive extends Component{
     constructor(props){
         super(props);
 
-        this.state = {answer: null};
+        this.state = {
+            answer: null, 
+            staffCount: 0,
+            errors: [],
+            currentErrorIndex: 0,
+            assignmentScore: null,
+            answerScore: null
+        };
         this.setAnswer = this.setAnswer.bind(this);
+        this.setStaffCount = this.setStaffCount.bind(this);
+        this.setErrors = this.setErrors.bind(this);
+        this.setScores = this.setScores.bind(this);
+        this.increaseErrorIndex = this.increaseErrorIndex.bind(this);
+        this.decreaseErrorindex = this.decreaseErrorindex.bind(this);
+        this.resetErrorIndex = this.resetErrorIndex.bind(this);
     }
 
     componentSetup(){
@@ -63,84 +76,56 @@ class ContentNFInteractive extends Component{
         })
     }
 
-    shouldComponentupdate(){
-        return false
+    setStaffCount(staffCount){
+        this.setState({staffCount})
     }
 
-    parseXML(assignmentXML, parser){
-        let parsedData = parser.parseFromString(assignmentXML, "text/xml");
-        parsedData = parsedData.getElementsByTagName("part")[0].getElementsByTagName("measure");
-        return parsedData
+    setErrors(errors){
+        this.setState({errors})
     }
 
-    checkXML(assignmentXML, answerData, assignmentScore){
-        for(let i = 0; i < answerData.length; i++){
-            if(answerData[i].innerHTML.toLowerCase() !== assignmentXML[i].innerHTML.toLowerCase()){
-              assignmentScore.selectMeasures(i, i+1);
-              return
-            } 
-          }
-          document.getElementById(`nf-interactive-${this.content.id}`).classList.add("nf-interactive-passed");     
-          this.props.stateMethods.increasePassedInteractiveCount()
+    setScores(assignmentScore, answerScore){
+        this.setState({
+            assignmentScore,
+            answerScore
+        })
     }
 
-   
-  
-      checkJSON(assignmentJSON, assignmentScore){
-        // parse and grade the assignmentJSON  
-        let graded = this.parseJSON(assignmentJSON);
-            // the graded array will only contain measures that are incorrect
-            // take the first measure that has an error, and select it in th assignment score
-            if(graded.length > 0){
-                assignmentScore.selectMeasures(graded[0][0], graded[0][0] + 1);
-            } else {
-                document.getElementById(`nf-interactive`).classList.add("nf-interactive-passed");
-                window.alert("You Passed!!!")
-            }
-        
-      }
-
-      parseJSON(assignmentJSON){
-        let currentMeasure = -1;
-        let passed = [];
-        const traverseAnswers = (answerData, assignmentData, currentKey = 'staves') => {
-
-            if(passed.length) return
-            // if the passed in answerData is itself a string, number, etc. 
-            // Check for equality with assignment and deterine grade
-            if(typeof answerData !== 'object'){
-                if(answerData !== assignmentData){
-                    console.log("FAILED");
-                    passed.push([currentMeasure, false]);
-                    return                    
-                } else {
-                    return
-                }
-            }
-
-            if(typeof answerData[currentKey] !== 'object'){ 
-                if(!assignmentData || answerData[currentKey] !== assignmentData[currentKey]){
-                    console.log("FAILED");
-                    passed.push([currentMeasure, false]);
-                    return
-                }
-            }
-            
-            for(let newKey in answerData[currentKey]){
-                if(newKey === "noteSets") currentMeasure++;
-                if(answerData && assignmentData){
-                    traverseAnswers(answerData[currentKey], assignmentData[currentKey], newKey);
-                }
-            }
+    increaseErrorIndex(){
+        let {currentErrorIndex} = this.state
+        if(currentErrorIndex + 1 < this.state.errors.length){
+            currentErrorIndex++
         }
+        this.setState({currentErrorIndex})
+    }
 
-        let answerJSON = this.state.answerData
-        traverseAnswers(answerJSON, assignmentJSON)
-        return passed 
-      }
+    decreaseErrorindex(){
+        let {currentErrorIndex} = this.state;
+        if(currentErrorIndex - 1 >= 0){
+            currentErrorIndex--;
+        }
+        this.setState({currentErrorIndex});
+    }
+
+    resetErrorIndex(){
+        this.setState({currentErrorIndex: 0});
+    }
+
+    showError(index){
+        
+        let errorIndex = this.state.errors[index]
+        let measure = (Math.floor(errorIndex / this.state.staffCount))
+        
+        this.state.assignmentScore.selectRange(
+            measure, // start of measure
+            0, // start offset 
+            measure + 1, // start of following measure
+            0, // end offset
+            [errorIndex % this.state.staffCount]
+        )        
+    }
 
     //   NF-XML
-
     compareMeasures(measureSet){
         let assignmentData = measureSet[0];
         let answerData = measureSet[1];
@@ -202,6 +187,7 @@ class ContentNFInteractive extends Component{
         // create the assignment and answer score iframes via the noteflight api
         const assignment = new this.NFClient.ScoreView(this.assignmentScoreCode, this.assignmentScoreCode, this.options.assignment);
         const answer = new this.NFClient.ScoreView(this.answerScoreCode, this.answerScoreCode, this.options.answer);
+        this.setScores(assignment, answer);
         // get the newly created iframe objects for later use
         const assignmentFrame = document.getElementById(this.assignmentScoreCode);
         const answerFrame = document.getElementById(this.answerScoreCode);
@@ -234,7 +220,7 @@ class ContentNFInteractive extends Component{
             })
         }
         
-        // ANSWER: When answer data loads, get and parse its musicXML and store it in the component state
+        // ANSWER: When answer data loads, get and parse its NFXML and store it in the component state
         answerFrame.onload = () => {
             console.log("Answer Loaded")
             answer.addEventListener("scoreDataLoaded", () => {
@@ -243,6 +229,8 @@ class ContentNFInteractive extends Component{
                     let dataXML = parser.parseFromString(data, "text/xml");
                     let staves = [...dataXML.getElementsByTagName("staff")].filter((x, i) => i > 0)
                     
+                    this.setStaffCount(staves.length);
+
                     let answerMeasureQueue = []; // generates an array where measures are queued in the correct order (top down each system)
                     for(let i = 0; i < staves[0].children.length; i++){
                         for(let j = 0; j < staves.length; j++){
@@ -274,20 +262,11 @@ class ContentNFInteractive extends Component{
                 }
 
                 let errors = this.measureErrors(measureQueue, this.state.answerData, parser)
-                // assignment.selectRange(1,0,2,0, [0])
-                if(errors.length){
-                    let errorIndex = errors[0]
-                    let staffCount = staves.length
-                    let measure = (Math.floor(errorIndex / staffCount))
-                    assignment.selectRange(
-                        measure, // start of measure
-                        0, // start offset 
-                        measure + 1, // start of following measure
-                        0, // end offset
-                        [errorIndex % staffCount]
-                    )
-                } else {
-                    window.alert("You Passed!!!")
+                this.resetErrorIndex()
+                this.setErrors(errors);
+                
+                if(!errors.length){
+                    window.alert("You Passed!");
                 }
             })
 
@@ -320,6 +299,11 @@ class ContentNFInteractive extends Component{
         // this way when anything is that would effect the component, we can update just those parts without having to remount the entire component.
         // this.constructor(this.props, this.state)
         this.componentSetup();
+
+        if(this.state.errors.length){
+            this.showError(this.state.currentErrorIndex)
+        }
+
         return (
             <div id="nf-interactive">
                 {
@@ -333,7 +317,10 @@ class ContentNFInteractive extends Component{
                 <div id={this.answerScoreCode}></div>
                 <br/>
                 <button id={`check-work`} disabled>Loading assignment...</button>
-
+                <div>
+                    <button onClick={this.decreaseErrorindex}>Decrease Error Index</button>
+                    <button onClick={this.increaseErrorIndex}>Increase Error Index</button>
+                </div>
             </div>
         )
     }
