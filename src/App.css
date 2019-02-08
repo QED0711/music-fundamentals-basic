@@ -52,3 +52,8 @@
   height: 5em;
   margin: 0 auto;
 }
+
+
+.nf-interactive-passed{
+  box-shadow: 2px 2px 10px rgb(40, 233, 40);
+}

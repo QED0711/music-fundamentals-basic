@@ -49,7 +49,7 @@ class NewAssignmentForm extends Component {
                 <NewAssignmentOptions />
                 <CheckForOptions />
 
-                <input type="submit" value="Generate Assignemtn Link" />
+                <input type="submit" value="Generate Assignment Link" />
             </form>
 
         )
