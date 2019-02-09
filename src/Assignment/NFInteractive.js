@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import convert from 'xml-js';
 import generateComparisonQueue from '../js/queueHelper';
+import ignoreKeys from '../js/ignoreKeys';
 
 // import parseOptionsString from '../../js/parseOptionsString';
 
@@ -129,11 +130,13 @@ class ContentNFInteractive extends Component{
     compareMeasures(measureSet){
         let assignmentData = measureSet[0];
         let answerData = measureSet[1];
-       
+        console.log({ignoreKeys})
+        console.log("ANSWER DATA: ", answerData)
+        console.log("ASSIGNMENT DATA: ", assignmentData)
+        // debugger
         let mismatch = false
 
         const traverseMeasureObject = (assignment, answer, currentKey = "measure") => {
-
             // if the assignment does not even have the currentKey, return an error
             if(!assignment[currentKey]){
                 mismatch = true;
@@ -161,6 +164,8 @@ class ContentNFInteractive extends Component{
             }
 
             for(let newKey in answer[currentKey]){
+                if(ignoreKeys[newKey]) continue
+                // console.log(newKey)
                 if(assignment && answer){
                     traverseMeasureObject(assignment[currentKey], answer[currentKey], newKey)
                 }
