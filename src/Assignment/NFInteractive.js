@@ -119,9 +119,9 @@ class ContentNFInteractive extends Component{
         this.state.assignmentScore.selectRange(
             measure, // start of measure
             0, // start offset 
-            measure + 1, // start of following measure
-            0, // end offset
-            [errorIndex % this.state.staffCount]
+            measure, // start of measure again
+            100, // the offset (set to a high number to almost guarantee it selects the whole measure)
+            [errorIndex % this.state.staffCount] // staff
         )        
     }
 
