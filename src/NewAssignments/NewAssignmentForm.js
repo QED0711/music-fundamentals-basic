@@ -17,7 +17,7 @@ class NewAssignmentForm extends Component {
             const type = document.getElementById("assignment-type").value
             
             const playCount = type === "dictation" ? document.getElementById("play-count").value : null;
-            const allowPlayback = type === "dictation" ? document.getElementById("allow-playback").checked : null;
+            const preventPlayback = type === "dictation" ? document.getElementById("prevent-playback").checked : null;
 
             const checkFor = [...document.getElementsByClassName("check-for")].map(x => {
                 if(x.checked){
@@ -28,7 +28,7 @@ class NewAssignmentForm extends Component {
             }).filter(x => {if(x) return x})
 
             let path = `http://${window.location.hostname}:3000?path=assignment&params=`
-            let params = JSON.stringify({assignment, answer, type, playCount, allowPlayback, checkFor})
+            let params = JSON.stringify({assignment, answer, type, playCount, preventPlayback, checkFor})
             
             let encrypted = cryptr.encrypt(params);
 

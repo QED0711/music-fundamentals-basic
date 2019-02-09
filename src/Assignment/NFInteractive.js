@@ -30,7 +30,7 @@ class ContentNFInteractive extends Component{
     componentSetup(){
         const {params} = this.props
         this.params = params
-
+        console.log(params)
         this.assignemntScore = params.assignment;
         this.answerScore = params.answer;
 
@@ -39,7 +39,7 @@ class ContentNFInteractive extends Component{
         for(let key of params.checkFor){
             ignoreKeys[key] = false;
         }
-        console.log(ignoreKeys)
+
         this.viewParams = {}
         this.options = {};
 
@@ -48,7 +48,7 @@ class ContentNFInteractive extends Component{
                 scale: 1,
                 role: "template",
                 displayMode: "paginated",
-                playback: "silent"
+                playback: !params.preventPlayback ? "normal" : "silent"
             }
         }
         
@@ -224,6 +224,13 @@ class ContentNFInteractive extends Component{
             assignment.addEventListener("scoreDataLoaded", () => {
                 console.log("ASSIGNMENT FRAME READY FOR INTERACTION")
             })
+            // if preventPlayback is set:
+            // when a playback request is received, immediately call stop playback
+            if(this.params.preventPlayback){
+                assignment.addEventListener("playbackRequest", () => {
+                    assignment.stopPlayback();
+                })
+            }
         }
         
         // ANSWER: When answer data loads, get and parse its NFXML and store it in the component state

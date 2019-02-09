@@ -7,8 +7,8 @@ const DictationOptions = () => {
             <label>Play Count (0 = infinite)</label><br/>
             <input id="play-count" type="number" defaultValue="0" min="0" required/><br/>
 
-            <label>Allow Assignment Score Playback</label><br/>
-            <input id="allow-playback" type="checkbox"/>
+            <label>Prevent Student Score Playback</label><br/>
+            <input id="prevent-playback" type="checkbox"/>
 
         </div>
     )
