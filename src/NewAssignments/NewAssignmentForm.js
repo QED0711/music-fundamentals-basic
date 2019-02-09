@@ -21,7 +21,7 @@ class NewAssignmentForm extends Component {
 
             const checkFor = [...document.getElementsByClassName("check-for")].map(x => {
                 if(x.checked){
-                    return x.id
+                    return x.value
                 } else {
                     return null
                 }

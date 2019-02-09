@@ -15,6 +15,10 @@ let keyList = [
     "dy",
     "endx",
     "endx",
+
+    "performance",
+    "chordSymbol",
+    "slur"
 ]
 
 for(let key of keyList){

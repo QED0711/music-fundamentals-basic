@@ -30,15 +30,16 @@ class ContentNFInteractive extends Component{
     componentSetup(){
         const {params} = this.props
         this.params = params
-        // TEMPORARY
-        this.params.gradingMethod = "simple";
 
         this.assignemntScore = params.assignment;
         this.answerScore = params.answer;
 
         this.NFClient = window.NFClient;
 
-
+        for(let key of params.checkFor){
+            ignoreKeys[key] = false;
+        }
+        console.log(ignoreKeys)
         this.viewParams = {}
         this.options = {};
 
