@@ -6,6 +6,7 @@ import cryptr from './js/encryption';
 import Navigation from './Banner/Navigation';
 import NewAssignmentContainer from './NewAssignments/NewAssignmentContainer';
 import AssignmentContainer from './Assignment/AssignmentContainer';
+import InfoContainer from './Information/InfoContainer';
 
 class App extends Component {
   render() {
@@ -16,7 +17,7 @@ class App extends Component {
 
         {search.get("path") === "assignment" && <AssignmentContainer />}
 
-        {search.get("path") === "info" && <h1>Info Page</h1>}
+        {search.get("path") === "info" && <InfoContainer />}
         {search.get("path") === "new" && <NewAssignmentContainer />}
         {search.get("path") === "token-checker" && <h1>Token Checker Page</h1>}
 
