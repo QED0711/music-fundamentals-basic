@@ -13,16 +13,19 @@ const CheckForOptions = () => {
 
     return(
         <div id="check-for-options">
-            <h5>Check For:</h5>
-
-            <label>Slurs/Phrase Marks</label>
-            <input id="slurs" value="slur" className="check-for" type="checkbox" /><br/>
+            <h5>Grading Options:</h5>
+            <p>
+                All assignments are checked for correct pitches and rhythms. 
+                You can select additional grading criteria from the list below (these will not be checked for by default)
+            </p>
+            <input id="slurs" value="slur" className="check-for" type="checkbox" />
+            <label for="slurs" >Slurs/Phrase Marks</label><br/>
             
-            <label>Roman Numeral & Chord Analysis</label>
-            <input id="rna" value="chordSymbol" className="check-for" type="checkbox" /><br/>
+            <input id="rna" value="chordSymbol" className="check-for" type="checkbox" />
+            <label for="rna">Roman Numeral & Chord Analysis</label><br/>
             
-            <label>Other Text</label>
-            <input id="text" value="performance" className="check-for" type="checkbox" /><br/>
+            <input id="text" value="performance" className="check-for" type="checkbox" />
+            <label for="text">Other Text</label>
             
         </div>
     )
