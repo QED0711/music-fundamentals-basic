@@ -16,7 +16,8 @@ class ContentNFInteractive extends Component{
             errors: [],
             currentErrorIndex: 0,
             assignmentScore: null,
-            answerScore: null
+            answerScore: null,
+            currentPlayCount: 0,
         };
         this.setAnswer = this.setAnswer.bind(this);
         this.setStaffCount = this.setStaffCount.bind(this);
@@ -25,6 +26,7 @@ class ContentNFInteractive extends Component{
         this.increaseErrorIndex = this.increaseErrorIndex.bind(this);
         this.decreaseErrorindex = this.decreaseErrorindex.bind(this);
         this.resetErrorIndex = this.resetErrorIndex.bind(this);
+        this.increaseCurrentPlayCount = this.increaseCurrentPlayCount.bind(this);
     }
 
     componentSetup(){
@@ -113,6 +115,13 @@ class ContentNFInteractive extends Component{
         this.setState({currentErrorIndex: 0});
     }
 
+    increaseCurrentPlayCount(){
+        let {currentPlayCount} = this.state;
+        currentPlayCount++
+        this.setState({currentPlayCount})
+        return currentPlayCount;
+    }
+
     showError(index){
         
         let errorIndex = this.state.errors[index]
@@ -134,10 +143,7 @@ class ContentNFInteractive extends Component{
 
         let mismatch = false
 
-        const traverseMeasureObject = (assignment, answer, currentKey = "measure") => {
-            if(typeof answer[currentKey] !== 'object' && typeof answer[currentKey] !== 'string'){
-                console.log("BOOM: ", typeof answer[currentKey]);
-            }
+        const traverseMeasureObject = (assignment, answer, currentKey = "measure") => {            
             // if the assignment does not even have the currentKey, return an error
             if(!assignment[currentKey]){
                 mismatch = true;
@@ -166,7 +172,8 @@ class ContentNFInteractive extends Component{
                 }
             }
 
-            // if both have a value at the currentKey, but they don't match
+            // if both have a value at the currentKey (that value will be a string in this XML to JS conversion)
+            // but they don't match (we check lowerCase here because for anything except chords we don't care about case)
             // return an error
             if(typeof answer[currentKey] === 'string'){
                 if(!assignment || answer[currentKey].toLowerCase() !== assignment[currentKey].toLowerCase()){
@@ -295,25 +302,23 @@ class ContentNFInteractive extends Component{
                     window.alert("You Passed!");
                 }
             })
-
-            // if(this.params.gradingMethod === "simple"){
-            //     assignment.getScore().done(data => {
-            //         this.checkJSON(data, assignment)
-            //     })
-            // } else {
-            //     assignment.getNoteflightXML().done(data => {
-            //         let assignmentXML = this.parseXML(data, parser);
-            //         let answerData = this.state.answerData
-            //         // console.log({answerData, assignmentXML})
-            //         this.checkXML(assignmentXML, answerData, assignment)
-            //     })
-            // }
         }
 
         // If assingmentType is a dictation, we need to allow for the user to play the dictation example
         if(this.params.type === "dictation"){
             playAnswerButton.onclick = (e) => {
-                answer.playFromSelection(0);
+                
+                if(this.state.currentPlayCount < parseInt(this.params.playCount) || this.params.playCount === "0"){
+                    answer.playFromSelection(0);
+
+                    let newPlayCount = this.state.currentPlayCount + 1;
+                    if(newPlayCount === parseInt(this.params.playCount)){
+                        e.target.innerText = "No Plays Remaining"
+                        e.target.disabled = true;
+                    }
+
+                    this.increaseCurrentPlayCount();
+                } 
             }
         }
     }
@@ -335,7 +340,13 @@ class ContentNFInteractive extends Component{
                 {
                     this.params.type === "dictation" 
                     &&
-                    <button id={`play-answer`} disabled>Loading Dictation...</button>
+                    <div>
+                        <button id={`play-answer`} disabled>Loading Dictation...</button>
+                        <p>Plays Remaining: {this.params.playCount === "0" 
+                        ? 
+                        "Unlimited" : parseInt(this.params.playCount) - this.state.currentPlayCount}</p>
+                    </div>
+
                 }
                 <br/>
                 {/* this div element below will be replaceed by a noteflight embeded score */}
