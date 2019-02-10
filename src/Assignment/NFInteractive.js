@@ -131,36 +131,49 @@ class ContentNFInteractive extends Component{
     compareMeasures(measureSet){
         let assignmentData = measureSet[0];
         let answerData = measureSet[1];
-        console.log({ignoreKeys})
-        console.log("ANSWER DATA: ", answerData)
-        console.log("ASSIGNMENT DATA: ", assignmentData)
-        // debugger
+
         let mismatch = false
 
         const traverseMeasureObject = (assignment, answer, currentKey = "measure") => {
+            if(typeof answer[currentKey] !== 'object' && typeof answer[currentKey] !== 'string'){
+                console.log("BOOM: ", typeof answer[currentKey]);
+            }
             // if the assignment does not even have the currentKey, return an error
             if(!assignment[currentKey]){
                 mismatch = true;
-                return "ERROR"
+                return
             }
             
-            // if the assignment and answer both have a value (not at the currentKey), but they do not match
+            // if the assignment and answer are themselves a value (not a new key), but they do not match
             // return an error
             if(typeof answer !== 'object'){
                 if(assignment !== answer){
                     mismatch = true;
-                    return "ERROR"
+                    return
                 } else {
                     return
                 }
             }
             
+            // If the currentKey is specifically "chord", then we need to check for capitalization (direct match)
+            // other text elements are handled below. 
+            if(currentKey === "chord"){
+                if(assignment[currentKey]._text !== answer[currentKey]._text){
+                    mismatch = true;
+                    return
+                } else {
+                    return
+                }
+            }
+
             // if both have a value at the currentKey, but they don't match
             // return an error
-            if(typeof answer[currentKey] !== 'object'){
-                if(!assignment || answer[currentKey] !== assignment[currentKey]){
+            if(typeof answer[currentKey] === 'string'){
+                if(!assignment || answer[currentKey].toLowerCase() !== assignment[currentKey].toLowerCase()){
                     mismatch = true;
-                    return "ERROR"
+                    return
+                } else {
+                    return
                 }
             }
 

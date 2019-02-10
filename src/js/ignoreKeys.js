@@ -15,6 +15,7 @@ let keyList = [
     "dy",
     "endx",
     "endx",
+    "color",
 
     "performance",
     "chordSymbol",
