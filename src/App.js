@@ -14,10 +14,10 @@ class App extends Component {
     return (
       <div className="App">
         <Navigation />
+        {search.get("path") === null && <InfoContainer />}
 
         {search.get("path") === "assignment" && <AssignmentContainer />}
 
-        {search.get("path") === "info" && <InfoContainer />}
         {search.get("path") === "new" && <NewAssignmentContainer />}
         {search.get("path") === "token-checker" && <h1>Token Checker Page</h1>}
 

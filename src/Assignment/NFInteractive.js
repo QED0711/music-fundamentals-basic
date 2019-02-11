@@ -299,7 +299,7 @@ class ContentNFInteractive extends Component{
                 this.setErrors(errors);
                 
                 if(!errors.length){
-                    window.alert("You Passed!");
+                    this.props.passedAssignment();
                 }
             })
         }

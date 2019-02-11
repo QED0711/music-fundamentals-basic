@@ -3,8 +3,22 @@ import React, {Component} from "react";
 import cryptr from '../js/encryption';
 
 import NFInteractive from './NFInteractive';
+import SignAndSubmit from "../Token/SignAndSubmit";
 
 class AssignmentContainer extends Component {
+
+    constructor(props){
+        super(props);
+
+        this.state = {
+            passed: false
+        }
+        this.passedAssignment = this.passedAssignment.bind(this);
+    }
+
+    passedAssignment(){
+        this.setState({passed: true})
+    }
 
     decryptParams(){
         const params = window.location.search.split("params=")[1]
@@ -17,15 +31,13 @@ class AssignmentContainer extends Component {
         console.log("ASSIGNMENT-PARAMS: ", params)
         return(
             <div id="assignment-container">
-                <h4>Assignment Type: {params.type}</h4>
+                <NFInteractive params={params} passedAssignment={this.passedAssignment} />
+
                 {
-                    params.type === "dictation" 
+                    this.state.passed
                     &&
-                    <div>
-                        <h4>Play Count: {params.playCount == 0 ? "No Limit" : params.playCount }</h4>
-                    </div>
+                    <SignAndSubmit />
                 }
-                <NFInteractive params={params} />
             </div>
             
         )
