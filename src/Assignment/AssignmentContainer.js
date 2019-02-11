@@ -36,7 +36,7 @@ class AssignmentContainer extends Component {
                 {
                     this.state.passed
                     &&
-                    <SignAndSubmit />
+                    <SignAndSubmit answer={params.answer}/>
                 }
             </div>
             
