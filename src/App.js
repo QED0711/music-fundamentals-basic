@@ -14,8 +14,11 @@ class App extends Component {
   constructor(props){
     super(props);
 
+    let assignment = new window.URLSearchParams(window.location.search).get("assignment")
+    
     this.state = {
-      path : "/"
+      path : "/",
+      assignment,
     }
 
     this.setPath = this.setPath.bind(this);
@@ -35,7 +38,11 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navigation setPath={this.setPath} />
-
+          {
+            (this.state.assignment && !search.get("assignment"))
+            &&
+            <a href={window.location.origin + "?assignment=" + this.state.assignment}>Return to Assignment</a>
+          }
           {
             (this.state.path === "/" && search.get("assignment"))
             &&
