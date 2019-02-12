@@ -27,7 +27,7 @@ class NewAssignmentForm extends Component {
                 }
             }).filter(x => {if(x) return x})
 
-            let path = `http://${window.location.hostname}:3000?path=assignment&params=`
+            let path = `http://${window.location.hostname}:3000?assignment=`
             let params = JSON.stringify({assignment, answer, type, playCount, preventPlayback, checkFor})
             
             let encrypted = cryptr.encrypt(params);

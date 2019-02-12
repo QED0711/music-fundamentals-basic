@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Redirect} from 'react-router-dom';
 
 import cryptr from '../js/encryption';
 
@@ -21,12 +22,17 @@ class AssignmentContainer extends Component {
     }
 
     decryptParams(){
-        const params = window.location.search.split("params=")[1]
+        const params = window.location.search.split("assignment=")[1]
         const decrypted = cryptr.decrypt(params);
         return JSON.parse(decrypted);
     }
 
     render(){
+        if(!window.location.search.match("assignment")){
+            let path = window.location.href.split("/")
+            path = path[path.length - 1];
+            return <Redirect to={`/${path}`} />
+        }
         const params = this.decryptParams();
         console.log("ASSIGNMENT-PARAMS: ", params)
         return(

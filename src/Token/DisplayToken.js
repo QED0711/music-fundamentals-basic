@@ -23,7 +23,7 @@ class DisplayToken extends Component {
     render(){
         return(
             <div>
-                <p>If you have completed this assignment as part of a course, you can submit the token generated below is proof of completion</p>
+                <p>If you have done this assignment as part of a course, the token generated below may serve as proof of completion</p>
                 <textarea id="encrypted-token" value={this.encryptData(this.studentName, this.answer)}></textarea>
             </div>
         )
