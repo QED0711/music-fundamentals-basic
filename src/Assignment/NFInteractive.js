@@ -33,7 +33,7 @@ class ContentNFInteractive extends Component{
         const {params} = this.props
         this.params = params
         console.log(params)
-        this.assignemntScore = params.assignment;
+        this.assignmentScore = params.assignment;
         this.answerScore = params.answer;
 
         this.NFClient = window.NFClient;
@@ -42,10 +42,11 @@ class ContentNFInteractive extends Component{
             ignoreKeys[key] = false;
         }
 
-        this.viewParams = {}
         this.options = {};
 
         this.options.assignment = {
+            width: "100%",
+            hieght: "100%",
             viewParams: {
                 scale: 1,
                 role: "template",

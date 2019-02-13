@@ -30,7 +30,7 @@ class TokenChecker extends Component {
                     <label for="encrypted-token">Paste Your Token Here</label><br/>
                     <textarea id="encrypted-token"></textarea><br/>
 
-                    <input type="submit" value="Decrypt Token" />
+                    <input type="submit" value="Verify Token" />
                 </form>
 
                 {

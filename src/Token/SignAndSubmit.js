@@ -31,7 +31,7 @@ class SignAndSubmit extends Component {
     render(){
         
         return(
-            <div>
+            <div id="submit-assignment">
                 {
                     !this.state.signature
                     &&

@@ -12,13 +12,15 @@ const Navigation = ({setPath}) => {
 
     return(
         <nav id="main-nav-banner">
-            {/* <a className="main-nav-link" href="/?path=info"><h3>Information & Tutorials</h3></a>
-            <a className="main-nav-link" href="/?path=new"><h3>New Assignment</h3></a>
-            <a className="main-nav-link" href="/?path=token-checker"><h3>Check Token</h3></a> */}
-
-            <Link to="/" onClick={handleClick("/")}>Information & Tutorials</Link>
-            <Link to="/new" onClick={handleClick("/new")}>New Assignment</Link>
-            <Link to="/token-checker" onClick={handleClick("/token-checker")}>Check Token</Link>
+            <div className="nav-button">
+                <Link to="/" onClick={handleClick("/")}>Information & Tutorials</Link>
+            </div>
+            <div className="nav-button">
+                <Link to="/new" onClick={handleClick("/new")}>New Assignment</Link>
+            </div>
+            <div className="nav-button">
+                <Link to="/token-checker" onClick={handleClick("/token-checker")}>Check Token</Link>
+            </div>
         </nav>
     )
 

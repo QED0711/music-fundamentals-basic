@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import './css/assignment.css'
+
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import Navigation from './Banner/Navigation';
@@ -39,15 +41,19 @@ class App extends Component {
         <div className="App">
           <Navigation setPath={this.setPath} />
           {
+            // if the user got here through an assignment link
+            // but they left the assignment page, provide a return link to the assignment
             (this.state.assignment && !search.get("assignment"))
             &&
             <a href={window.location.origin + "?assignment=" + this.state.assignment}>Return to Assignment</a>
           }
+
           {
             (this.state.path === "/" && search.get("assignment"))
             &&
             <AssignmentContainer />
           }
+          
           {
             (this.state.path === "/" && !search.get("assignment"))
             &&
