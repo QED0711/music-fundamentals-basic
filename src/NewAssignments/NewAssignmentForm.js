@@ -40,15 +40,15 @@ class NewAssignmentForm extends Component {
         return(
             
             <form id="new-assignment-form" onSubmit={this.handleSubmit(this.props.setLink)}>
-                <label>Assignment Score</label><br/>
-                <input id="assignment" type="text" required/><br/>
+                <label>Assignment Score*</label><br/>
+                <input id="assignment" type="text" placeholder="Noteflight URL" required/><br/>
                 
-                <label>Answer Score</label><br/>
-                <input id="answer" type="text" required/><br/>
+                <label>Answer Score*</label><br/>
+                <input id="answer" type="text" placeholder="Noteflight URL" required/><br/>
 
                 <NewAssignmentOptions />
                 <CheckForOptions />
-
+                <p>(* indicates a required field)</p>
                 <input type="submit" value="Generate Assignment Link" />
             </form>
 

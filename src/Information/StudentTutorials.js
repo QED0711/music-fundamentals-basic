@@ -4,7 +4,10 @@ class StudentTutorials extends Component {
 
     render(){
         return(
-            <h1>+ Student Tutorials</h1>
+            <div className="tutorial-section">
+                <h1>+</h1>
+                <h1>Student Tutorials</h1>
+            </div>
         )
     }
 }
