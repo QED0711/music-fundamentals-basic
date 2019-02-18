@@ -13,8 +13,6 @@ const CheckForOptions = () => {
 
     return(
         <div id="check-for-options">
-            <hr/>
-            <h2>Grading Options:</h2>
             <p>
                 All assignments are checked for correct pitches and rhythms. 
                 You can select additional grading criteria from the list below (these will not be checked for by default)
@@ -27,7 +25,6 @@ const CheckForOptions = () => {
             
             <input id="text" value="performance" className="check-for" type="checkbox" />
             <label for="text">Other Text</label>
-            <hr/>
         </div>
     )
 

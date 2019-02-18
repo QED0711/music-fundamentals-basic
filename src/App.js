@@ -4,6 +4,7 @@ import './App.css';
 import './css/assignment.css'
 import './css/nav-banner.css'
 import './css/input.css'
+import './css/new-assignment.css'
 
 import { BrowserRouter, Route } from 'react-router-dom';
 

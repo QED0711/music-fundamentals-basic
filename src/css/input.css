@@ -9,6 +9,10 @@ input, select, textarea{
     color: var(--dark-accent);
 }
 
+textarea{
+    resize: none;
+    padding: .66em;
+}
 
 input[type="submit"]{
     background-color: rgba(0, 0, 0, 0);
