@@ -1,5 +1,5 @@
 
-.assignment-form-section{
+.assignment-form-section, .section-box{
     padding: 0 0 .66em;
     width: 66%;
     min-width: 300px;
@@ -10,7 +10,7 @@
     background-color: var(--background-color-secondary);
 }
 
-.new-assignment-section-heading{
+.new-assignment-section-heading, .section-heading{
     margin: 0;
     padding: 0 0 .25em;
     background-color: var(--dark-accent);

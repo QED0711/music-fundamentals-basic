@@ -1,0 +1,15 @@
+.tutorial-section{
+    display: grid;
+    grid-template-columns: 2em auto;
+
+    margin: 1em auto;
+}
+
+.tutorial-section-heading{
+    background-color: var(--background-color-secondary);
+}
+
+.toggle-expand{
+    background-color: var(--dark-accent);
+    color: var(--white-text);
+}

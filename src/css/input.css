@@ -1,4 +1,4 @@
-input, select, textarea{
+input, select, textarea, button{
     border-radius: 4px;
     border: none;
 
@@ -11,10 +11,14 @@ input, select, textarea{
 
 textarea{
     resize: none;
-    padding: .66em;
+    padding: .66em 0;
 }
 
-input[type="submit"]{
+
+
+
+
+input[type="submit"], #assignment-container button{
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid black;
     
@@ -24,6 +28,19 @@ input[type="submit"]{
     
     cursor: pointer;
 }
+
+input[type="submit"]:hover, #assignment-container button:hover{
+    color: var(--highlight-color);
+    border: 2px solid var(--highlight-color);
+    box-shadow: 5px 5px 20px var(--dark-accent);
+}
+
+
+
+
+
+
+
 
 input[type="text"], input[type="number"]{
     box-shadow: 2px 2px 8px var(--dark-accent);

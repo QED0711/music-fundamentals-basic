@@ -37,7 +37,7 @@ class AssignmentContainer extends Component {
         console.log("ASSIGNMENT-PARAMS: ", params)
         return(
             <div id="assignment-container">
-                <NFInteractive params={params} passedAssignment={this.passedAssignment} />
+                <NFInteractive params={params} passed={this.state.passed} passedAssignment={this.passedAssignment} />
 
                 {
                     this.state.passed

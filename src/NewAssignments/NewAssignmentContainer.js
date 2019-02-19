@@ -38,7 +38,7 @@ class NewAssignmentContainer extends Component{
                 && 
                 <div>
                     <p>Share the link below to give students and other users access to your assignment</p>
-                    <textarea id="copy-link" defaultValue={this.state.link} readonly="true"></textarea>
+                    <textarea id="copy-link" value={this.state.link} readonly="true"></textarea>
                     <br/>
                     <a href={this.state.link} target="_blank">See Your Assignment</a>
                 </div>

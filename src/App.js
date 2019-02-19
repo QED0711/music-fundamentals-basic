@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import './css/info.css'
 import './css/assignment.css'
 import './css/nav-banner.css'
 import './css/input.css'

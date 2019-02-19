@@ -20,11 +20,20 @@ class DisplayToken extends Component {
         return cryptr.encrypt(JSON.stringify(tokenData));
     }
 
+    copyText(e){
+        const text = document.getElementById("encrypted-token");
+        text.select();
+        document.execCommand("copy");
+    }
+
     render(){
         return(
             <div>
-                <p>If you have done this assignment as part of a course, the token generated below may serve as proof of completion</p>
+                <p>
+                    The token below may serve as proof of completion for this assignment.
+                </p>
                 <textarea id="encrypted-token" value={this.encryptData(this.studentName, this.answer)}></textarea>
+                <button onClick={this.copyText}>Copy to Clipboard</button>
             </div>
         )
     }

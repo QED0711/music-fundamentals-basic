@@ -31,12 +31,17 @@ class SignAndSubmit extends Component {
     render(){
         
         return(
-            <div id="submit-assignment">
+            <div id="submit-assignment" className="section-box">
                 {
                     !this.state.signature
                     &&
                     <form id="sign-and-submit-form" onSubmit={this.handleSubmit(this.setSignature)}>
-                        <label for="name">Student Name</label><br/>
+                        <h2>Congratulations! You passed!</h2>
+                        <p>
+                            If you completed this assignment as part of a class, sign your name below and submit.
+                            A unique token will be generated for you to use as proof of completion.
+                        </p>
+                        <label for="name">Your Name</label><br/>
                         <input type="text" id="name" /><br/>
     
                         <input type="submit" value="Sign & Submit" />

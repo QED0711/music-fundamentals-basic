@@ -22,12 +22,12 @@ class DisplayDecryptedToken extends Component {
     render(){
         let decrypted = JSON.parse(this.decryptToken(this.props.token))
         return(
-            <div id='decrypted-token'>
+            <div id='decrypted-token' className='section-box'>
                 {
                     decrypted
                     &&
                     <div>
-                        <h3>Verified</h3>
+                        <h2 className="section-heading">Verified</h2>
                         <h4>Name: {decrypted.studentName}</h4>
                         <h4>Completed On: {this.parseDate(decrypted.date)}</h4>
                         <a href={decrypted.answer} target="_blank"><h4>View Score</h4></a>
@@ -37,7 +37,7 @@ class DisplayDecryptedToken extends Component {
                 {
                     !decrypted
                     &&
-                    <h3>The token you have entered is invalid</h3>
+                    <h2 className="section-heading">The token you have entered is invalid</h2>
                 }
             </div>
         )

@@ -300,6 +300,7 @@ class ContentNFInteractive extends Component{
                 this.setErrors(errors);
                 
                 if(!errors.length){
+                    assignmentFrame.className = "score-container nf-assignment-score nf-interactive assignment-score-passed"
                     this.props.passedAssignment();
                 }
             })
@@ -354,11 +355,24 @@ class ContentNFInteractive extends Component{
                 <div id={this.assignmentScoreCode}></div>
                 <div id={this.answerScoreCode}></div>
                 <br/>
-                <button id={`check-work`} disabled>Loading assignment...</button>
-                <div>
-                    <button onClick={this.decreaseErrorindex}>Decrease Error Index</button>
-                    <button onClick={this.increaseErrorIndex}>Increase Error Index</button>
-                </div>
+                {
+                    !this.props.passed
+                    &&
+                    <button id='check-work' disabled>Loading assignment...</button>
+                }
+                {
+                    this.state.errors.length > 0
+                    &&
+                    <div id="error-navigation-buttons" className="section-box">
+                        <h2>Errors</h2>
+                        <p>
+                            use the buttons below to navigate through the marked errors on the score.
+                            Make sure to press the "Check Your Work" button to recheck for errors.
+                        </p>
+                        <button onClick={this.decreaseErrorindex}>{"<<"}</button>
+                        <button onClick={this.increaseErrorIndex}>{">>"}</button>
+                    </div>
+                }
             </div>
         )
     }
