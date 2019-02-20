@@ -8,12 +8,15 @@ class InfoContainer extends Component {
 
 
     render(){
+        const domainName = window.location.origin.split("//")[1]
         return(
             <div>
-                <h1>[DOMAIN NAME]</h1>
+                <h1>{domainName}</h1>
                 <p>
-                    Welcome to [DOMAIN NAME] , a tool that allows music teachers to easily create and link to high quality, interactive, self-grading music assignments. 
-                    Whether you are a teacher or a student, there is no signup required, and it is 100% free to use!
+                    {
+
+                    `Welcome to ${domainName} , a tool that allows music teachers to easily create and link to high quality, interactive, self-grading music assignments. Whether you are a teacher or a student, there is no signup required, and it is 100% free to use!`
+                    }
                 </p>
 
                 <p>

@@ -3,6 +3,7 @@
 .tutorial-container{
     width: 85%;
     margin: 0 auto;
+    text-align: left;
 }
 
 .tutorial-banner{
@@ -16,7 +17,7 @@
 }
 
 .tutorial-banner-element{
-    
+
 }
 
 .tutorial-active-indicator{
@@ -29,6 +30,12 @@
 
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+}
+
+.content-container{
+    box-shadow: 2px 2px 20px var(--dark-accent) inset;
+    border-radius: 8px;
+    padding: 1em;
 }
 
 .tutorial-banner-title{

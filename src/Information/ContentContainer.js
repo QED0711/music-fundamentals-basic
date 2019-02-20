@@ -2,10 +2,16 @@ import React, {Component} from "react";
 
 class ContentContainer extends Component {
 
+    renderContent(data){
+
+    }
+
     render(){
         const {content} = this.props
         return(
-            <h1>{content.title}</h1>
+            <div className="content-container">
+                {content.data}
+            </div>
         )
     }
 }
