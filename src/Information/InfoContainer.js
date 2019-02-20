@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import StudentTutorials from './StudentTutorials';
-import InstructorTutorials from './InstructorTutorials';
+import TutorialContainer from './TutorialContainer';
 
-
+import studentContent from './content/studentContent'
+import instructorContent from './content/instructorContent'
 
 class InfoContainer extends Component {
 
@@ -19,9 +19,8 @@ class InfoContainer extends Component {
                 <p>
                     Click the appropriate category below for more information and video tutorials on how to use this site.
                 </p>
-
-                <StudentTutorials />
-                <InstructorTutorials />
+                <TutorialContainer content={studentContent}/>
+                <TutorialContainer content={instructorContent}/>
                 
             </div>
         )

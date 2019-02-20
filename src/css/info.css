@@ -1,8 +1,18 @@
-.tutorial-section{
+
+
+.tutorial-container{
+    width: 85%%;
+    margin: 0 auto;
+}
+
+.tutorial-banner{
     display: grid;
     grid-template-columns: 2em auto;
-
+    text-align: left;
     margin: 1em auto;
+
+    cursor: pointer;
+
 }
 
 .tutorial-section-heading{
