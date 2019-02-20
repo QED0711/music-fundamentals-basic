@@ -1,18 +1,39 @@
 
 
 .tutorial-container{
-    width: 85%%;
+    width: 85%;
     margin: 0 auto;
 }
 
 .tutorial-banner{
     display: grid;
-    grid-template-columns: 2em auto;
+    grid-template-columns: 4em auto;
     text-align: left;
     margin: 1em auto;
 
     cursor: pointer;
 
+}
+
+.tutorial-banner-element{
+    
+}
+
+.tutorial-active-indicator{
+    /* margin: 0;
+    font-size: 3em; */
+    text-align: center;
+    font-weight: 900;
+    background-color: var(--dark-accent);
+    color: var(--white-text);
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.tutorial-banner-title{
+    padding-left: 1em;
+    background-color: var(--background-color-secondary);
 }
 
 .tutorial-section-heading{

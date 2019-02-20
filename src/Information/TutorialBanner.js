@@ -6,12 +6,13 @@ class TutorialBanner extends Component {
     render(){
         return(
             <div className="tutorial-banner" onClick={this.props.toggleActive}>
-                <div>
-                    <h2>{this.props.activeState ? "x" : "+"}</h2>    
+                <div className="tutorial-banner-element tutorial-active-indicator">
+                    <h1>{this.props.activeState ? "-" : "+"}</h1>    
                 </div>
-                <div>
-                    <h2>{this.props.title}</h2>
+                <div className="tutorial-banner-title tutorial-banner-element">
+                    <h1>{this.props.title}</h1>
                 </div>
+                
             </div>
         )
     }
