@@ -34,8 +34,9 @@
 
 .content-container{
     box-shadow: 2px 2px 20px var(--dark-accent) inset;
+    background-color: whitesmoke;
     border-radius: 8px;
-    padding: 1em;
+    padding: .25em 0 1em 1.5em;
 }
 
 .tutorial-banner-title{
