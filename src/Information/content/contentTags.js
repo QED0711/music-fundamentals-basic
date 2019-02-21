@@ -6,7 +6,11 @@ export function paragraph(text){
 }
 
 export function sectionHeading(text){
-    return <h2>{text}</h2>
+    return (
+        <div className="heading-container">
+            <h2>{text}</h2>
+        </div>
+    )
 }
 
 export function orderedList(listItems){
@@ -14,5 +18,15 @@ export function orderedList(listItems){
         <ol>
             {listItems.map(item => <li>{item}</li>)}
         </ol>
+    )
+}
+
+export function link(text, url){
+    return <a href={url} target="_blank">{text}</a>
+}
+
+export function embededVideo(vidCode){
+    return(
+        <iframe className="embeded-video" src={`https://www.youtube.com/embed/${vidCode}`} style={{display: "block"}} width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     )
 }
