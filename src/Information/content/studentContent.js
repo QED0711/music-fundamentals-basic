@@ -19,7 +19,7 @@ const studentContent = {
             "Showing how to sign and submit a completed assignemt to a course or instructor",
             "showing how to view the answer key to an assignment after it has been completed"
         ]),
-        paragraph("Assignments are built using Noteflight scores. If you are not familiar with the Noteflight platform, I suggest that you visit the link below for tutorials on how to use their product."),
+        paragraph("Note: Assignments are built using Noteflight scores. If you are not familiar with the Noteflight platform, I suggest that you visit the link below for tutorials on how to use their product."),
         link("Noteflight User Guide", "https://www.noteflight.com/guide"),
         
         sectionHeading("Interacting With Assignments"),
