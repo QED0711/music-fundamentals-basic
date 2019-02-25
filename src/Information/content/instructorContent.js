@@ -50,8 +50,12 @@ const instructorContent = {
             "Avoid requiring overly specific answers. This could be something like requiring full sentences for text answers, or precise rhythms that require a combination of notes and rests.",
             "Avoide ambiguous questions. Make sure there is a single answer to the questions you ask.",
             "Keep assignments simple, and focus on just one or two things. If an assingment has too many elements in it, it can be challenging for users to remember everything they are supposed to enter.",
-            "Always check and perform your assignments after you make them to ensure they can be completed as you designed"
+            "Always do your own assignments after you make them to ensure they can be completed as you designed."
         ]),
+
+        sectionHeading("Editing Assignments After They Have Been Created"),
+        paragraph("This program does not save any information you enter when you create an assignment. Rather, the link that is generated when you create your assignment contains everytning needed to recreate it when a user follows that link. While this allows for an unlimited number of assignments, you cannot edit any assignment parameters after you generate a link because any edits to the parameters would cause the link to change."),
+        paragraph("However, you can still edit the assignment and answer scores on Noteflight, and those changes will be reflected in you assignment. So if you want to add a few more examples, or change the answer to an existing example, you can do this on Noteflight in the linked scores.")
         
     ]
 
