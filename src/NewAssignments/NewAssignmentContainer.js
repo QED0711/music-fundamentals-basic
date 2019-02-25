@@ -25,7 +25,7 @@ class NewAssignmentContainer extends Component{
             <section className="instructions">
                 <h2>Create a new assignment</h2>
                 <p>
-                    Welcome to the assignment creator! To make a new assignment, you will need two URLs: One to your assignment score that you created in Noteflight (the one people will interact with), and an answer template score. 
+                    Welcome to the assignment creator! To make a new assignment, you will need two URLs: One to your assignment score that you created in <a className="in-text-link" href="https://www.noteflight.com" target="_blank">Noteflight</a> (the one people will interact with), and an answer template score. 
                     Your answer score should be the same as the assignment score, but with all the answers marked exactly as you would like them in the assignment.
                     Make sure both scores are shared on Noteflight with all users, a specific user, or a specific group, and that "Let people copy & export this score" is checked.
                 </p>

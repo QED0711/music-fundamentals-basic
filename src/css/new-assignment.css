@@ -18,3 +18,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
+.in-text-link{
+    color: var(--highlight-color);
+}
