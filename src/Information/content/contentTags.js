@@ -21,6 +21,14 @@ export function orderedList(listItems){
     )
 }
 
+export function unorderedList(listItems){
+    return(
+        <ul>
+            {listItems.map(item => <li>{item}</li>)}
+        </ul>
+    )
+}
+
 export function link(text, url){
     return <a href={url} target="_blank">{text}</a>
 }
