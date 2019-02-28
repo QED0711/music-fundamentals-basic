@@ -40,6 +40,7 @@ class App extends Component {
     const search = new window.URLSearchParams(window.location.search);
     let path = window.location.href.split("/")
     path = path[path.length - 1];
+    console.log("LOCATION: ", window.location.href)
     return (
       <BrowserRouter>
         <div className="App">

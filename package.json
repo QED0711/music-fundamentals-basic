@@ -2,9 +2,10 @@
   "name": "music-fundamentals-basic",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://QED0711.github.io/music-fundamentals-basic",
+  "homepage": "http://qed0711.github.io/music-fundamentals-basic",
   "dependencies": {
     "cryptr": "^4.0.2",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-router-dom": "^4.3.1",
@@ -16,8 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
