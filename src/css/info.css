@@ -17,7 +17,7 @@
 }
 
 .tutorial-banner-element{
-
+    box-shadow: 2px 2px 5px var(--dark-accent);
 }
 
 .tutorial-active-indicator{

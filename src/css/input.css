@@ -12,13 +12,14 @@ input, select, textarea, button{
 textarea{
     resize: none;
     padding: .66em 0;
+    box-shadow: 2px 2px 10px var(--dark-accent) inset;
 }
 
 
 
 
 
-input[type="submit"], #assignment-container button{
+input[type="submit"], #assignment-container, button{
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid black;
     
@@ -29,7 +30,7 @@ input[type="submit"], #assignment-container button{
     cursor: pointer;
 }
 
-input[type="submit"]:hover, #assignment-container button:hover{
+input[type="submit"]:hover, #assignment-container, button:hover{
     color: var(--highlight-color);
     border: 2px solid var(--highlight-color);
     box-shadow: 5px 5px 20px var(--dark-accent);
@@ -55,4 +56,9 @@ select{
 label{
     font-size: 1.5em;
     margin-bottom: 1em;
+}
+
+
+.copy-text-button{
+    font-size: .75em;
 }

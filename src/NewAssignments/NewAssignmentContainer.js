@@ -19,6 +19,13 @@ class NewAssignmentContainer extends Component{
         this.setState({link});
     }
 
+    copyText(e){
+        const text = document.getElementById("copy-link");
+        debugger
+        text.select();
+        document.execCommand("copy");
+    }
+
     render(){
         return(
             <div id="new-assignment-container">
@@ -39,6 +46,7 @@ class NewAssignmentContainer extends Component{
                 <div>
                     <p>Share the link below to give students and other users access to your assignment</p>
                     <textarea id="copy-link" value={this.state.link} readonly="true"></textarea>
+                    <button className="copy-text-button" onClick={this.copyText}>Copy to Clipboard</button>
                     <br/>
                     <a href={this.state.link} target="_blank">See Your Assignment</a>
                 </div>
