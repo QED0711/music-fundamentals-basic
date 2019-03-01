@@ -1,0 +1,13 @@
+@media only screen and (max-width: 1000px){
+    body{
+        font-size: 1em;
+    }
+    
+    .nav-button{
+        margin: 1em 0;
+    }
+    #main-nav-banner{
+        grid-template-columns: 1fr; 
+        grid-gap: 1em;
+    }
+}

@@ -3,15 +3,19 @@
 
 #assignment-container{
     background-color: var(--background-color);
-
+    
     padding: 2em;
-    width: 85%;
+    width: 93%;
     margin: 2em auto;
     border-radius: 4px;
-    box-shadow: 2px 2px 20px rgb(218, 218, 218) inset;
+    border: none;
+    box-shadow: 2px 2px 20px var(--dark-accent) inset;
+    cursor: auto;
+
+    color: var(--dark-accent);
 }
 
-/* #assignment-container button{
+#assignment-container button{
     font-size: 1.5em;
     font-weight: 600;
     color: var(--highlight-color);
@@ -22,27 +26,28 @@
 
     cursor: pointer;
 
-} */
+}
+
 
 .nf-assignment-score{
     box-shadow: 2px 2px 20px #a08e7a;
-    height: 65em;
+    height: 45em;
 }
 
 .nf-answer-score{
     display: hidden;
 }
 
-#error-navigation-buttons{
-    background-color: var(--background-color-secondary);
-    border-radius: 10px;
-    width: 50%;
 
+#submit-assignment, #error-navigation-buttons{
+    background-color: #DDDDD8;
+    color: black;
+    /* padding: .66em; */
     margin: 0 auto;
-    
 }
 
-#error-navigation-buttons h2{
+
+#error-navigation-buttons h2, #sign-and-submit-form h2{
     color: var(--white-text);
     background-color: var(--dark-accent);
     padding: .25em 0;
@@ -61,11 +66,8 @@
 
 
 
-#submit-assignment{
-    background-color: var(--background-color-secondary);
-    padding: .66em;
-}
+
 
 #submit-assignment h2{
-    color: var(--highlight-color);
+    /* color: var(--highlight-color); */
 }
