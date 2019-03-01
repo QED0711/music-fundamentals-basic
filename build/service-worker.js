@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/music-fundamentals-basic/precache-manifest.391a3fea1cb0e8c3e5895002ac9b79d1.js"
+  "/music-fundamentals-basic/precache-manifest.b24118456efdc2520ba42b68f973c81c.js"
 );
 
 workbox.clientsClaim();

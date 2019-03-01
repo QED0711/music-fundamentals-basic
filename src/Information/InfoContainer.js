@@ -12,7 +12,7 @@ class InfoContainer extends Component {
         return(
             <div>
                 <h1>{domainName}</h1>
-                <h2><em>NOTE: This software is still in the testing phase. Any use at this stage carries no expressed or implied guarantee of full functionality</em></h2>
+                <h2><em>NOTE: This software is still in development. Any use at this stage carries no expressed or implied guarantee of full functionality</em></h2>
                 <p>
                     {
                     

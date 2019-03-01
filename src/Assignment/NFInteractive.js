@@ -48,7 +48,7 @@ class ContentNFInteractive extends Component{
             width: "100%",
             hieght: "100%",
             viewParams: {
-                scale: 1,
+                scale: 1.5,
                 role: "template",
                 displayMode: "paginated",
                 playback: !params.preventPlayback ? "normal" : "silent"
