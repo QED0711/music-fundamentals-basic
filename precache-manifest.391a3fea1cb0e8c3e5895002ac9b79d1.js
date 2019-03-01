@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/music-fundamentals-basic/static/js/runtime~main.521561b3.js"
   },
   {
-    "revision": "180bcfb0ffde7a1de43f48b2209e991c",
+    "revision": "708ceaba14b8304f1871383fbbedfe87",
     "url": "/music-fundamentals-basic/index.html"
   }
 ];
