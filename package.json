@@ -2,7 +2,7 @@
   "name": "music-fundamentals-basic",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://qed0711.github.io/music-fundamentals-basic",
+  "homepage": "https://musictheoryportal.com",
   "dependencies": {
     "cryptr": "^4.0.2",
     "gh-pages": "^2.0.1",
