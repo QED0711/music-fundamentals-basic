@@ -32,12 +32,32 @@
     border-bottom-left-radius: 10px;
 }
 
+@keyframes slide-open {
+    0%{
+        color: whitesmoke;
+        max-height: 0;
+    }
+
+    50%{
+        color: var(--dark-accent);
+    }
+
+    100%{
+        max-height: 250em;
+    }
+}
+
 .content-container{
     box-shadow: 2px 2px 20px var(--dark-accent) inset;
     background-color: whitesmoke;
     border-radius: 8px;
     padding: .25em 0.5em 1em 1.5em;
+
+    animation: slide-open 3s forwards;
+    animation-timing-function: ease-out;
 }
+
+
 
 .tutorial-banner-title{
     padding-left: 1em;
