@@ -10,6 +10,10 @@
     background-color: var(--background-color-secondary);
 }
 
+.assignment-form-section p{
+    margin: .5em;
+}
+
 .new-assignment-section-heading, .section-heading{
     margin: 0;
     padding: 0 0 .25em;

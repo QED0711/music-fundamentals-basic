@@ -39,7 +39,7 @@ class NewAssignmentContainer extends Component{
                     Make sure both scores are shared on Noteflight with all users, a specific user, or a specific group, and that "Let people copy & export this score" is checked.
                 </p>
                 <p>
-                    See the <Link to="/" className="in-text-link">tutorials</Link> for more information on how to setup your scores.
+                    See the {/* <Link to="/" className="in-text-link"> */}tutorials{/* </Link> */} for more information on how to setup your scores.
                 </p>
             </section>
                 <NewAssignmentForm setLink={this.setLink}/>
