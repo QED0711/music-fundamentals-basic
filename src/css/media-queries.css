@@ -11,3 +11,9 @@
         grid-gap: 1em;
     }
 }
+
+@media only screen and (max-width: 460px){
+    body{
+        font-size: .75em;
+    }
+}
