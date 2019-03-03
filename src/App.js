@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
+
+
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
+
+
 import './App.css';
+
 
 import './css/info.css'
 import './css/nav-banner.css'
@@ -7,6 +15,7 @@ import './css/input.css'
 import './css/new-assignment.css'
 import './css/media-queries.css'
 import './css/assignment.css'
+
 
 import { BrowserRouter, Route } from 'react-router-dom';
 

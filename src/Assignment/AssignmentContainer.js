@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import {Redirect} from 'react-router-dom';
 
+import {MDBIcon} from 'mdbreact';
+
 import cryptr from '../js/encryption';
 
 import NFInteractive from './NFInteractive';

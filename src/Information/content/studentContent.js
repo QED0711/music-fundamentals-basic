@@ -25,14 +25,14 @@ const studentContent = {
         sectionHeading("Interacting With Assignments"),
         paragraph('For both written and dictation assignments, you can check your work at any time by pressing the "Check My Work" button below the score. If everything matches the answer template, you will be allowed to sign and submit your assignment. Otherwise, any incorrect answers will be shown on the score. '),
         paragraph('For dictation assignments, you can also play the dictation excerpt by pressing the "Play Dictation" button above the score. Depening on how the assignment was setup, you may have a limited number of playings available on any single attempt of the assignment.'),
-        paragraph("NOTE: Interacting with assignments only works after they have been propery loaded from the noteflight server. Occasionally, there may be an issue connecting to the server, and neither of previously mentioend buttons will do anything. If this is the case, simple refresh the page, and it should work."),
+        paragraph("NOTE: Interacting with assignments only works after they have been propery loaded from the noteflight server. Occasionally, there may be an issue connecting to the server, and neither of the previously mentioend buttons will do anything. If this is the case, simple refresh the page, and it should work."),
         // embededVideo("HaBQfSAVt0s"),
 
         sectionHeading("Assignment Grading & Error Display"),
         paragraph("All assignments are checked for correct notes and rhythms, plus any additional grading criteria that the assignment designer may have set."),
         paragraph('When you check your work, the program checks each measure individually against the answer template. If anything is found to be a mismatch, then the measure will be highlighted to indicate that there is an error.'),
         paragraph('If the assignment requires a chord/roman numeral analysis, upper case vs lower case letters will matter. Other text, like that which you might find above the staff, are not graded for case.'),
-        paragraph('If there are errors when the assignment is graded, you can visually step through each measure where there was an error with arrow keys that will appear below the assignment. As you step through the errors, you can see what you got right, and what you got wrong, and make adjustments as needed.'),
+        paragraph('If there are errors when the assignment is graded, you can visually step through each measure to see where your errors are. As you step through the errors, you can see what you got right, what you got wrong, and make adjustments as needed.'),
         // embededVideo("Da8-QfGemgo"),
 
         sectionHeading("Signing & Submitting Your Work"),

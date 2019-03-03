@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {MDBIcon} from 'mdbreact'
 
 import convert from 'xml-js';
 import generateComparisonQueue from '../js/queueHelper';
@@ -364,13 +365,14 @@ class ContentNFInteractive extends Component{
                     this.state.errors.length > 0
                     &&
                     <div id="error-navigation-buttons" className="section-box">
+                        
                         <h2>Errors</h2>
                         <p>
-                            use the buttons below to navigate through the marked errors on the score.
+                            Use the buttons below to navigate through the marked errors on the score.
                             Make sure to press the "Check Your Work" button to recheck for errors.
                         </p>
-                        <button onClick={this.decreaseErrorindex}>{"<<"}</button>
-                        <button onClick={this.increaseErrorIndex}>{">>"}</button>
+                        <button onClick={this.decreaseErrorindex}><MDBIcon icon="arrow-left"/> Previous Error </button>
+                        <button onClick={this.increaseErrorIndex}>Next Error <MDBIcon icon="arrow-right"/></button>
                     </div>
                 }
             </div>
