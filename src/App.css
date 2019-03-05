@@ -5,7 +5,7 @@
   --highlight-color: #f88550;
   --white-text: white;
   --passed-color: #79e479;
-  --font-color: black;
+  --font-color: #1b1b1b;
 }
 
 
@@ -67,15 +67,7 @@ textarea{
   width: 100%;
 }
 
-input[type = 'checkbox']{
-    /* Double-sized Checkboxes */
-    -ms-transform: scale(2); /* IE */
-    -moz-transform: scale(2); /* FF */
-    -webkit-transform: scale(2); /* Safari and Chrome */
-    -o-transform: scale(2); /* Opera */
-    padding: 10px;
-    margin-right: 1em;
-}
+
 
 
 .tutorial-section h1{

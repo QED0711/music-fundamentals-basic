@@ -10,10 +10,30 @@
         grid-template-columns: 1fr; 
         grid-gap: 1em;
     }
+
+    input[type = 'checkbox']{
+        /* Double-sized Checkboxes */
+        -ms-transform: scale(1.5); /* IE */
+        -moz-transform: scale(1.5); /* FF */
+        -webkit-transform: scale(1.5); /* Safari and Chrome */
+        -o-transform: scale(1.5); /* Opera */
+        padding: 10px;
+        margin-right: .5em;
+    }
 }
 
 @media only screen and (max-width: 800px){
     body{
         font-size: .75em;
+    }
+
+    input[type = 'checkbox']{
+        /* Double-sized Checkboxes */
+        -ms-transform: scale(1); /* IE */
+        -moz-transform: scale(1); /* FF */
+        -webkit-transform: scale(1); /* Safari and Chrome */
+        -o-transform: scale(1); /* Opera */
+        padding: 10px;
+        margin-right: .25em;
     }
 }
