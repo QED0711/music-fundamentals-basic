@@ -76,7 +76,6 @@ class ContentNFInteractive extends Component{
     }
 
     setAnswer(answerData){
-        console.log(answerData)
         this.setState({
             answerData
         })
@@ -125,7 +124,7 @@ class ContentNFInteractive extends Component{
     }
 
     showError(index){
-        
+
         let errorIndex = this.state.errors[index]
         let measure = (Math.floor(errorIndex / this.state.staffCount))
         
@@ -136,6 +135,10 @@ class ContentNFInteractive extends Component{
             100, // the offset (set to a high number to almost guarantee it selects the whole measure)
             [errorIndex % this.state.staffCount] // staff
         )        
+    }
+
+    deselectMeasures(){
+        this.state.assignmentScore.clearSelection()
     }
 
     //   NF-XML
@@ -302,6 +305,7 @@ class ContentNFInteractive extends Component{
                 
                 if(!errors.length){
                     assignmentFrame.className = "score-container nf-assignment-score nf-interactive assignment-score-passed"
+                    this.deselectMeasures()
                     this.props.passedAssignment();
                 }
             })
