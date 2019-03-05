@@ -28,7 +28,7 @@ class DisplayToken extends Component {
 
     render(){
         return(
-            <div>
+            <div className="encrypted-token">
                 <p>
                     The token below may serve as proof of completion for this assignment.
                 </p>

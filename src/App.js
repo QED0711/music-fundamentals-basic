@@ -55,6 +55,8 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navigation setPath={this.setPath} />
+          <div className="app-body">
+
           {
             // if the user got here through an assignment link
             // but they left the assignment page, provide a return link to the assignment
@@ -79,6 +81,7 @@ class App extends Component {
 
           
 
+          </div>
         </div>
       </BrowserRouter>
     );

@@ -15,19 +15,6 @@
     color: var(--dark-accent);
 }
 
-#assignment-container button{
-    font-size: 1.5em;
-    font-weight: 600;
-    color: var(--highlight-color);
-    background-color: rgba(255, 255, 255, 0);
-    padding: .5em;
-    border-radius: 20px;
-    border: 3px solid var(--highlight-color);
-
-    cursor: pointer;
-
-}
-
 
 .nf-assignment-score{
     box-shadow: 2px 2px 20px #a08e7a;
@@ -40,9 +27,9 @@
 
 
 #submit-assignment, #error-navigation-buttons{
-    background-color: #DDDDD8;
-    color: black;
-    /* padding: .66em; */
+    background-color: var(--background-color);
+    color: var(--dark-accent);
+    
     margin: 0 auto;
 }
 
@@ -60,14 +47,8 @@
 
 .assignment-score-passed{
     box-shadow: 2px 2px 40px var(--passed-color);
-  }
+}
 
-
-
-
-
-
-
-#submit-assignment h2{
-    /* color: var(--highlight-color); */
+.encrypted-token{
+    padding: 1em;
 }

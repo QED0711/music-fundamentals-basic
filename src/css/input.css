@@ -14,7 +14,10 @@ textarea{
     resize: none;
     padding: .66em .5em;
     min-height: 5em;
-    box-shadow: 2px 2px 10px var(--dark-accent) inset;
+    box-shadow: 2px 2px 10px var(--dark-accent);
+    color: var(--white-text);
+    font-size: 1em;
+    background-color: var(--dark-accent);
 }
 
 
@@ -23,7 +26,7 @@ textarea{
 
 input[type="submit"], #assignment-container, button{
     background-color: rgba(0, 0, 0, 0);
-    border: 2px solid black;
+    border: 2px solid var(--dark-accent);
     
     padding: 0.25em;
     margin: 1em;

@@ -1,5 +1,13 @@
 
 
+.landing-box{
+    padding: .5em 1em;
+    margin-top:  1em;
+    box-shadow: 2px 2px 5px var(--dark-accent) inset;
+    border-radius: 8px;
+    background-color: var(--background-color-secondary);
+}
+
 .tutorial-container{
     width: 85%;
     margin: 0 auto;
@@ -39,11 +47,12 @@
     }
 
     50%{
-        color: var(--dark-accent);
-    }
-
-    100%{
+        /* color: whitesmoke; */
         max-height: 250em;
+    }
+    
+    100%{
+        color: var(--dark-accent);
     }
 }
 
@@ -53,7 +62,7 @@
     border-radius: 8px;
     padding: .25em 0.5em 1em 1.5em;
 
-    animation: slide-open 3s forwards;
+    animation: slide-open 2s forwards;
     animation-timing-function: ease-out;
 }
 

@@ -31,7 +31,7 @@ class NewAssignmentContainer extends Component{
     render(){
         return(
             <div id="new-assignment-container">
-            <section className="instructions">
+            <section className="instructions text-box">
                 <h2>Create a new assignment</h2>
                 <p>
                     Welcome to the assignment creator! To make a new assignment, you will need two URLs: One to your assignment score that you created in <a className="in-text-link" href="https://www.noteflight.com" target="_blank">Noteflight</a> (the one people will interact with), and an answer template score. 
