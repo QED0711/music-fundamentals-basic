@@ -30,7 +30,7 @@ export function unorderedList(listItems){
 }
 
 export function link(text, url){
-    return <a href={url} target="_blank">{text}</a>
+    return <div><a href={url} target="_blank">{text}</a></div>
 }
 
 export function embededVideo(vidCode){

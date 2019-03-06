@@ -46,12 +46,16 @@ const instructorContent = {
         paragraph("When creating your assignments, it is important to keep in mind that users must know exactly what to enter and where to enter it in order to pass the assignments. Therefore, I recommend the following as general guidlines for creating well structured music assignments:"),
         unorderedList([
             "Include written instructions when able, either in the document that links to the assignment, or the assignment itself.",
-            "Use colors to highlight where users should place their answers. As an example if they need to add notes, highlight the rests where their notes should go. If they need to add text, create a text object where you would like it, and higlhight it (requires Noteflight premium to add colors).",
-            "Avoid requiring overly specific answers. This could be something like requiring full sentences for text answers, or precise rhythms that require a combination of notes and rests.",
-            "Avoide ambiguous questions. Make sure there is a single answer to the questions you ask.",
+            "Use colors to highlight where users should place their answers. As an example, if they need to add notes, highlight the rests where their notes should go. If they need to add text, create a text object where you would like it, and higlhight it (requires Noteflight premium to add colors).",
+            "Avoid requiring overly specific answers. This could be something like requiring full sentences for text answers, or precise rhythms that require an exact sequence of notes and rests.",
+            "Avoid ambiguous questions. Make sure there is a single answer to the questions you ask.",
             "Keep assignments simple, and focus on just one or two things. If an assingment has too many elements in it, it can be challenging for users to remember everything they are supposed to enter.",
             "Always do your own assignments after you make them to ensure they can be completed as you designed."
         ]),
+        paragraph("Example assignments can be found at the links below:"),
+        link("Name the Note", "https://bit.ly/2XyFt8J"),
+        link("Writing Major Scales", "https://bit.ly/2GWV1hs"),
+        link("Simple Melodic Dictation", "https://bit.ly/2EwLQkq"),
 
         sectionHeading("Editing Assignments After They Have Been Created"),
         paragraph("This program does not save any information you enter when you create an assignment. Rather, the link that is generated when you create your assignment contains everytning needed to recreate it when a user follows that link. While this allows for an unlimited number of assignments, you cannot edit any assignment parameters after you generate a link because any edits to the parameters would cause the link to change."),

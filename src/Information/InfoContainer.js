@@ -13,6 +13,7 @@ class InfoContainer extends Component {
             <div>
                 <section className="text-box">                        
                     <h1>{domainName}</h1>
+                    <p><em>Created and Maintained by Quinn Dizon</em></p>
                     <h2><em>NOTE: This software is still in development. Any use at this stage carries no expressed or implied guarantee of full functionality</em></h2>
                     <p>
                         {
