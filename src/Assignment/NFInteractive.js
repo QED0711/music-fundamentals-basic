@@ -228,6 +228,7 @@ class ContentNFInteractive extends Component{
         const playAnswerButton = document.getElementById('play-answer');
       
         const activateButtons = () => {
+            document.getElementById("reload-warning").remove()
             checkWorkButton.innerHTML = "Check Your Work"
             checkWorkButton.disabled = false;
             if(playAnswerButton){
@@ -360,6 +361,7 @@ class ContentNFInteractive extends Component{
                 <div id={this.assignmentScoreCode}></div>
                 <div id={this.answerScoreCode}></div>
                 <br/>
+                <p id="reload-warning"><em>If the button below is stuck on "Loading Assignment...", try refreshing the page. You may need to refresh a few time before the score loads correctly.</em></p>
                 {
                     !this.props.passed
                     &&
