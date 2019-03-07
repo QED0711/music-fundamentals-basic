@@ -10,11 +10,11 @@ import './App.css';
 
 
 import './css/info.css'
-import './css/nav-banner.css'
 import './css/input.css'
 import './css/new-assignment.css'
 import './css/media-queries.css'
 import './css/assignment.css'
+import './css/nav-banner.css'
 
 
 import { BrowserRouter, Route } from 'react-router-dom';

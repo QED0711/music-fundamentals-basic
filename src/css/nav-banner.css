@@ -3,7 +3,7 @@
     background-color: var(--dark-accent);
 }
 
-.nav-banner a {
+.nav-desktop a {
     color: var(--white-text);
     border: 2px solid var(--white-text);
 
@@ -12,6 +12,25 @@
 
     border-radius: 8px;
     padding: .66em;
+}
+
+.nav-mobile .nav-button{
+
+    margin: 1em;
+}
+
+.nav-mobile .nav-button a{
+    color: var(--white-text);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.nav-mobile hr{
+    border-color: var(--white-text); 
+}
+
+.hamburger-icon{
+    margin: .25em 0;
 }
 
 
@@ -25,18 +44,8 @@
     text-align: center;
 }
 
-
-#main-nav-banner a{
-
-/* font-size: 1.5em; */
-    color: var(--white-text);
-    border: 2px solid var(--white-text);
-
-    text-decoration: none;
-    font-weight: 600;
-
-    border-radius: 8px;
-    padding: .66em;
+.nav-mobile{
+    display: none;
 }
 
 #main-nav-banner a:hover{
@@ -46,10 +55,15 @@
 
 
 
-
 @media only screen and (max-width: 1000px){
     .nav-desktop{
-        display: hidden;
+        display: none;
+    }
+
+    .nav-mobile{
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
+
 

@@ -3,13 +3,13 @@
         font-size: 1em;
     }
     
-    .nav-button{
+    /* .nav-button{
         margin: 1em 0;
-    }
-    #main-nav-banner{
+    } */
+    /* #main-nav-banner{
         grid-template-columns: 1fr; 
         grid-gap: 1em;
-    }
+    } */
 
     input[type = 'checkbox']{
         /* Double-sized Checkboxes */
@@ -37,3 +37,5 @@
         margin-right: .25em;
     }
 }
+
+
