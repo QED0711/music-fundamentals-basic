@@ -1,10 +1,24 @@
 
+.nav-banner{
+    background-color: var(--dark-accent);
+}
 
-#main-nav-banner{
+.nav-banner a {
+    color: var(--white-text);
+    border: 2px solid var(--white-text);
+
+    text-decoration: none;
+    font-weight: 600;
+
+    border-radius: 8px;
+    padding: .66em;
+}
+
+
+.nav-desktop{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   
-    background-color: var(--dark-accent);
     width: 100%;
     margin: 0 auto;
     padding: 2.5em 0;
@@ -28,5 +42,14 @@
 #main-nav-banner a:hover{
     color: var(--highlight-color);
     border-color: var(--highlight-color);
+}
+
+
+
+
+@media only screen and (max-width: 1000px){
+    .nav-desktop{
+        display: hidden;
+    }
 }
 
