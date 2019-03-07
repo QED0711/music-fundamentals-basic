@@ -48,7 +48,7 @@
     display: none;
 }
 
-#main-nav-banner a:hover{
+.nav-desktop a:hover{
     color: var(--highlight-color);
     border-color: var(--highlight-color);
 }
