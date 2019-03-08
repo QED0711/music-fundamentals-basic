@@ -1,6 +1,6 @@
 @media only screen and (max-width: 1000px){
     body{
-        font-size: 1em;
+        font-size: 1.1em;
     }
     
     /* .nav-button{
@@ -10,6 +10,12 @@
         grid-template-columns: 1fr; 
         grid-gap: 1em;
     } */
+    .tutorial-container{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    
 
     input[type = 'checkbox']{
         /* Double-sized Checkboxes */
@@ -24,7 +30,20 @@
 
 @media only screen and (max-width: 800px){
     body{
-        font-size: .75em;
+        font-size: 1em;
+    }
+    
+    .information-heading{
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .information-paragraph{
+        text-align: center;
+    }
+
+    .assignment-form-section{
+        width: 100%
     }
 
     input[type = 'checkbox']{
