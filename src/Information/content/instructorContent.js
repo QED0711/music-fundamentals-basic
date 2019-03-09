@@ -18,6 +18,8 @@ const instructorContent = {
             "Configuring your scores on Noteflight to allow auto-grading",
             "Optimizing your Noteflight scores for easy grading",
             "Additional grading configurations",
+            "Editing assignments after they have been created",
+            "Suggested Practices for creating assignments on Noteflight",
         ]),
         paragraph("Note: Assignments are built using Noteflight scores. If you are not familiar with the Noteflight platform, I suggest that you visit the link below for tutorials on how to use their product."),
         link("Noteflight User Guide", "https://www.noteflight.com/guide"),
@@ -37,13 +39,17 @@ const instructorContent = {
         sectionHeading("Additional Grading Options"),
         paragraph("You can optionally specify other musical elements that you want the program to grade. None of these elements are graded by default. These elements are detaild below:"),
         unorderedList([
-            "Slurs & Phrase Marks: this checks slur marks between two notes. It does not check the exact positioning of te slurs, but only that they start and end on the correct note.",
+            "Slurs & Phrase Marks: this checks slur marks between two notes. It does not check the exact positioning of the slurs, but only that they start and end on the correct notes.",
             'Roman Numeral & Chord Analysis: This will check for any text made with the "Chord" text tool. For these, upper vs lower case does matter, and an answer will read as incorrect if it does not match the exact capitalization.',
             'Other Text: This would be anything created with the "Text" tool. For this, spelling will matter, but capitalization will not. This is best used for simple text answers, like indicating intervals, cadence types, etc.',
         ]),
 
+        sectionHeading("Editing Assignments After They Have Been Created"),
+        paragraph("This program does not save any information you enter when you create an assignment. Rather, the link that is generated when you create your assignment contains everytning needed to recreate it when a user follows that link. While this allows for an unlimited number of assignments, you cannot edit any assignment parameters after you generate a link because any edits to the parameters would cause the link to change."),
+        paragraph("However, you can still edit the assignment and answer scores on Noteflight, and those changes will be reflected in you assignment. So if you want to add a few more examples, or change the answer to an existing example, you can do this on Noteflight in the linked scores."),
+
         sectionHeading("Suggested Practices for Creating Assignment Scores"),
-        paragraph("When creating your assignments, it is important to keep in mind that users must know exactly what to enter and where to enter it in order to pass the assignments. Therefore, I recommend the following as general guidlines for creating well structured music assignments:"),
+        paragraph("When creating your assignments, it is important to keep in mind that users must know exactly what to enter and where to enter it in order to pass the assignment. Therefore, I recommend the following as general guidlines for creating well structured music assignments:"),
         unorderedList([
             "Include written instructions when able, either in the document that links to the assignment, or the assignment itself.",
             "Use colors to highlight where users should place their answers. As an example, if they need to add notes, highlight the rests where their notes should go. If they need to add text, create a text object where you would like it, and higlhight it (requires Noteflight premium to add colors).",
@@ -57,9 +63,7 @@ const instructorContent = {
         link("Writing Major Scales", "https://bit.ly/2GWV1hs"),
         link("Simple Melodic Dictation", "https://bit.ly/2EwLQkq"),
 
-        sectionHeading("Editing Assignments After They Have Been Created"),
-        paragraph("This program does not save any information you enter when you create an assignment. Rather, the link that is generated when you create your assignment contains everytning needed to recreate it when a user follows that link. While this allows for an unlimited number of assignments, you cannot edit any assignment parameters after you generate a link because any edits to the parameters would cause the link to change."),
-        paragraph("However, you can still edit the assignment and answer scores on Noteflight, and those changes will be reflected in you assignment. So if you want to add a few more examples, or change the answer to an existing example, you can do this on Noteflight in the linked scores.")
+        
         
     ]
 

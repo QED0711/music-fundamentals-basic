@@ -15,7 +15,7 @@ const studentContent = {
         paragraph("If you received or found a link to an assignment on this site, welcome! The following tutorials well help you by:"),
         orderedList([
             "Showing how to interact with written and dictation assignments", 
-            "Explaining how assignment are gradeds, and how incorrect errors are displayed",
+            "Explaining how assignment are graded, and how incorrect errors are displayed",
             "Showing how to generate a unique token as proof of completion",
             "showing how to view the answer key to an assignment after it has been completed"
         ]),
@@ -24,7 +24,7 @@ const studentContent = {
         
         sectionHeading("Interacting With Assignments"),
         paragraph('For both written and dictation assignments, you can check your work at any time by pressing the "Check My Work" button below the score. If everything matches the answer template, you will be allowed to sign and submit your assignment. Otherwise, any incorrect answers will be shown on the score. '),
-        paragraph('For dictation assignments, you can also play the dictation excerpt by pressing the "Play Dictation" button above the score. Depening on how the assignment was setup, you may have a limited number of playings available on any single attempt of the assignment.'),
+        paragraph('For dictation assignments, you can also play the dictation excerpt by pressing the "Play Dictation" button above the score. Depening on how the assignment was setup, you may have a limited number of playings available on any single attempt.'),
         paragraph("NOTE: Interacting with assignments only works after they have been propery loaded from the noteflight server. Occasionally, there may be an issue connecting to the server, and neither of the previously mentioend buttons will do anything. If this is the case, simple refresh the page, and it should work after a few attempts."),
         // embededVideo("HaBQfSAVt0s"),
 
@@ -36,7 +36,7 @@ const studentContent = {
         // embededVideo("Da8-QfGemgo"),
 
         sectionHeading("Signing & Submitting Your Work"),
-        paragraph("If you are doing an assignment for a course, and need proof that you completed it, the application can generate a unique token as proof of your completion. Once an assignment has been completed, and there are no errors, you will be allowed to sign your name and submit. Upon submitting, a token, unique to your signature and time the assignment was completed, will be generated. You can then copy this token and provide it as proof to any instructor that you completed the assignment. They can then verify the token to ensure its authenticity."),
+        paragraph("If you are doing an assignment for a course, and need proof that you completed it, the application can generate a unique token for you that your instructor can later authenticate. Once an assignment has been completed, and there are no errors, you will be allowed to sign your name and submit. Upon submitting, a token, unique to your signature and time the assignment was completed, will be generated. You can then copy this token and provide it as proof to any instructor that you completed the assignment. They can then verify the token to ensure its authenticity."),
         paragraph("NOTE: Even if you are not completing the assignment for part of a course, you may still wish to generate a token and save it for later. This token will also allow you to view the answer template at a later date, without having to redo the assignment."),
         // embededVideo("nsnyl8llfH4"),
 
