@@ -19,10 +19,16 @@ class InfoContainer extends Component {
                         {
                             
                             `Welcome to ${domainName} , a tool that allows music teachers to easily create and link to high quality, interactive, self-grading music assignments. 
-                            Whether you are a teacher or a student, there is no signup required, and absolutely free to use.
-                            This application is built using the Noteflight notation interface. If you are unfamiliar with their product, I highly recommend that you visit their site to learn more about the wonderful features Noteflight provides.
+                            Whether you are a teacher or a student, there is no signup required, and it is absolutely free to use.
                             `
 
+                        }
+                    </p>
+                    <p>
+                        {
+                            `
+                            This application is built using the Noteflight notation interface. If you are unfamiliar with their product, I highly recommend that you visit their site to learn more about the wonderful features Noteflight provides.
+                            `
                         }
                     </p>
                     <a href="https://www.noteflight.com" target="_blank"><p>Noteflight.com</p></a>
