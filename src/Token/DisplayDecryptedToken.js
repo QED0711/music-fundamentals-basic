@@ -26,7 +26,7 @@ class DisplayDecryptedToken extends Component {
                 {
                     decrypted
                     &&
-                    <div>
+                    <div className="token-info">
                         <h2 className="section-heading">Verified</h2>
                         <h4>Name: {decrypted.studentName}</h4>
                         <h4>Completed On: {this.parseDate(decrypted.date)}</h4>

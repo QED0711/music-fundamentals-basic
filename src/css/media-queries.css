@@ -57,4 +57,15 @@
     }
 }
 
+@media only screen and (max-width: 400px){
+    body{
+        font-size: 0.75em;
+    } 
+
+    .text-box{
+        text-align: center;
+    }
+
+}
+
 
