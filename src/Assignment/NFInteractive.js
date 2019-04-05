@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {MDBIcon} from 'mdbreact'
 
-import convert from 'xml-js';
+// import convert from 'xml-js';
 import generateComparisonQueue from '../js/queueHelper';
 import ignoreKeys from '../js/ignoreKeys';
 
@@ -33,7 +33,6 @@ class ContentNFInteractive extends Component{
     componentSetup(){
         const {params} = this.props
         this.params = params
-        console.log(params)
         this.assignmentScore = params.assignment;
         this.answerScore = params.answer;
 
