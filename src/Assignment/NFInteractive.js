@@ -42,11 +42,18 @@ class ContentNFInteractive extends Component{
             ignoreKeys[key] = false;
         }
 
+        this.assignmentScoreCode = this.parseNFUrl(params.assignment).scoreCode
+        this.answerScoreCode = this.parseNFUrl(params.answer).scoreCode
+        
+        const assignmentHost = this.parseNFUrl(params.assignment).host
+        const answerHost = this.parseNFUrl(params.answer).host
+        debugger
         this.options = {};
 
         this.options.assignment = {
             width: "100%",
             hieght: "100%",
+            host: assignmentHost,
             viewParams: {
                 scale: 1.5,
                 role: "template",
@@ -58,20 +65,21 @@ class ContentNFInteractive extends Component{
         this.options.answer = {
             height: 1,
             width: 1,
+            host: answerHost,
             viewParams: {
                 scale: 0.1,
                 role: "reader",
                 displayMode: "paginated",
             }
         }
-
-        this.assignmentScoreCode = this.parseNFUrl(params.assignment)
-        this.answerScoreCode = this.parseNFUrl(params.answer)
     }
 
     parseNFUrl(url){
         let splitUrl = url.split("/")
-        return splitUrl[splitUrl.length - 1];
+        return {
+            host: splitUrl[2],
+            scoreCode: splitUrl[splitUrl.length - 1]
+        }
     }
 
     setAnswer(answerData){
@@ -356,7 +364,7 @@ class ContentNFInteractive extends Component{
 
                 }
                 <br/>
-                {/* this div element below will be replaceed by a noteflight embeded score */}
+                {/* these div element below will be replaceed by a noteflight embeded score */}
                 <div id={this.assignmentScoreCode}></div>
                 <div id={this.answerScoreCode}></div>
                 <br/>
