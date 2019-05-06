@@ -16,6 +16,7 @@ let keyList = [
     "endx",
     "endx",
     "color",
+    "beam",
 
     "performance",
     "chordSymbol",
