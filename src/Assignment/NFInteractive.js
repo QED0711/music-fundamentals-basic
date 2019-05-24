@@ -47,7 +47,7 @@ class ContentNFInteractive extends Component{
         
         const assignmentHost = this.parseNFUrl(params.assignment).host
         const answerHost = this.parseNFUrl(params.answer).host
-        debugger
+        
         this.options = {};
 
         this.options.assignment = {

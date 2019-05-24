@@ -30,13 +30,17 @@ class AssignmentContainer extends Component {
     }
 
     render(){
+
+        window.assignmentInfo = () => {
+            console.log("ASSIGNMENT-PARAMS: ", params)
+        }
+
         if(!window.location.search.match("assignment")){
             let path = window.location.href.split("/")
             path = path[path.length - 1];
             return <Redirect to={`/${path}`} />
         }
         const params = this.decryptParams();
-        console.log("ASSIGNMENT-PARAMS: ", params)
         return(
             <section className="text-box">
                 <h2>Interactive Assignment</h2>
