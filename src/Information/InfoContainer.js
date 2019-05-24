@@ -14,7 +14,7 @@ class InfoContainer extends Component {
                 <section className="text-box">                        
                     <h1 className="information-heading">{domainName}</h1>
                     <p className="information-paragraph"><em>Created and maintained by <a href="http://quinndizon.com" target="_blank">Quinn Dizon</a></em></p>
-                    <h2 className="information-heading"><em>NOTE: This software is still in development. Any use at this stage carries no expressed or implied guarantee of full functionality</em></h2>
+                    <h5 className="information-heading"><strong><em>NOTE: This software is currently in beta testing. Please report any issues to the project <a href="mailto:qdizon%40gmail%2ecom?subject=Musictheoryportal%20Bug%20Report&body=Dear%20Quinn%20Dizon,">administrator</a></em></strong></h5>
                     <p>
                         {
                             

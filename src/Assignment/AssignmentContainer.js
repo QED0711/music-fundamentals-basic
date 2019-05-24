@@ -1,12 +1,11 @@
 import React, {Component} from "react";
 import {Redirect} from 'react-router-dom';
 
-import {MDBIcon} from 'mdbreact';
-
 import cryptr from '../js/encryption';
 
 import NFInteractive from './NFInteractive';
 import SignAndSubmit from "../Token/SignAndSubmit";
+import privateVariables from "../privateVariables";
 
 class AssignmentContainer extends Component {
 
@@ -31,8 +30,13 @@ class AssignmentContainer extends Component {
 
     render(){
 
-        window.assignmentInfo = () => {
-            console.log("ASSIGNMENT-PARAMS: ", params)
+        window.assignmentInfo = (passcode) => {
+            if(passcode === privateVariables.cryptrKey){
+                console.log("ASSIGNMENT-PARAMS: ", params)
+            } else {
+                console.log("You need administrator access to view this content.")
+            }
+            
         }
 
         if(!window.location.search.match("assignment")){
