@@ -5,15 +5,18 @@ import cryptr from '../js/encryption';
 class DisplayToken extends Component {
     constructor(props){
         super(props);
-
+        
         this.studentName = props.studentName;
-        this.answer = props.answer
+        this.answer = props.answer;
+        this.title = props.title;
+
     }
 
     encryptData(studentName, answer){
         let tokenData = {
             studentName,
             answer,
+            title: this.title,
             date: new Date()
         }
         console.log(tokenData);

@@ -5,7 +5,7 @@ class SignAndSubmit extends Component {
     
     constructor(props){
         super(props);
-
+        console.log(this.props.answer)
         this.state = {
             signature: null
         }
@@ -51,7 +51,7 @@ class SignAndSubmit extends Component {
                 {
                     !!this.state.signature
                     &&
-                    <DisplayToken studentName={this.state.signature} answer={this.props.answer}/>
+                    <DisplayToken studentName={this.state.signature} answer={this.props.answer} title={this.props.title}/>
                 }
 
             </div>

@@ -13,9 +13,11 @@ class AssignmentContainer extends Component {
         super(props);
 
         this.state = {
-            passed: false
+            passed: false,
+            title: null
         }
         this.passedAssignment = this.passedAssignment.bind(this);
+        this.setTitle = this.setTitle.bind(this);
     }
 
     passedAssignment(){
@@ -26,6 +28,10 @@ class AssignmentContainer extends Component {
         const params = window.location.search.split("assignment=")[1]
         const decrypted = cryptr.decrypt(params);
         return JSON.parse(decrypted);
+    }
+
+    setTitle(title){
+        this.setState({title})
     }
 
     render(){
@@ -54,12 +60,12 @@ class AssignmentContainer extends Component {
                 <p>All assignments are built using the Noteflight music notation application. For information on how to interact with the Noteflight score, see <a href="https://www.noteflight.com/guide" target="_blank">this link</a></p>
 
                 <div id="assignment-container">
-                    <NFInteractive params={params} passed={this.state.passed} passedAssignment={this.passedAssignment} />
+                    <NFInteractive params={params} passed={this.state.passed} passedAssignment={this.passedAssignment} setTitle={this.setTitle} />
 
                     {
                         this.state.passed
                         &&
-                        <SignAndSubmit answer={params.answer}/>
+                        <SignAndSubmit answer={params.answer} title={this.state.title} />
                     }
                 </div>
             </section>
