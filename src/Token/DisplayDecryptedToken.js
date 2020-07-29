@@ -30,7 +30,7 @@ class DisplayDecryptedToken extends Component {
                         <h2 className="section-heading">Verified</h2>
                         <h4>Name: {decrypted.studentName}</h4>
                         <h4>Completed On: {this.parseDate(decrypted.date)}</h4>
-                        <a href={decrypted.answer} target="_blank"><h4>View Answers</h4></a>
+                        <a href={decrypted.answer} target="_blank"><h4>{decrypted.title}</h4></a>
                     </div>
                 }               
 

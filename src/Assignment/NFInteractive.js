@@ -13,6 +13,7 @@ class ContentNFInteractive extends Component{
 
         this.state = {
             answer: null, 
+            title: null,
             staffCount: 0,
             errors: [],
             currentErrorIndex: 0,
@@ -273,8 +274,11 @@ class ContentNFInteractive extends Component{
                 // if detailed grading method, load score data as musicXML (checks for perfect match)
                 answer.getNoteflightXML().done(data => {
                     let dataXML = parser.parseFromString(data, "text/xml");
-                    let staves = [...dataXML.getElementsByTagName("staff")].filter((x, i) => i > 0)
                     
+                    const title = dataXML.getElementsByTagName("title")[0].innerHTML
+                    this.props.setTitle(title)
+
+                    let staves = [...dataXML.getElementsByTagName("staff")].filter((x, i) => i > 0)
                     this.setStaffCount(staves.length);
 
                     let answerMeasureQueue = []; // generates an array where measures are queued in the correct order (top down each system)
