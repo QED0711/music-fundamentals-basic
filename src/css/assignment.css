@@ -1,0 +1,54 @@
+
+
+
+#assignment-container{
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 2em;
+    width: 100%;
+    margin: 2em auto;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 2px 2px 20px var(--dark-accent) inset;
+    cursor: auto;
+
+    color: var(--dark-accent);
+}
+
+
+.nf-assignment-score{
+    box-shadow: 2px 2px 20px #a08e7a;
+    height: 30em;
+}
+
+.nf-answer-score{
+    display: hidden;
+}
+
+
+#submit-assignment, #error-navigation-buttons{
+    background-color: var(--background-color);
+    color: var(--dark-accent);
+    
+    margin: 0 auto;
+}
+
+
+#error-navigation-buttons h2, #sign-and-submit-form h2{
+    color: var(--white-text);
+    background-color: var(--dark-accent);
+    padding: .25em 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    margin: 0;
+}
+
+
+.assignment-score-passed{
+    box-shadow: 2px 2px 40px var(--passed-color);
+}
+
+.encrypted-token{
+    padding: 1em;
+}

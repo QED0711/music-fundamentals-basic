@@ -1,0 +1,71 @@
+@media only screen and (max-width: 1000px){
+    body{
+        font-size: 1.1em;
+    }
+    
+    /* .nav-button{
+        margin: 1em 0;
+    } */
+    /* #main-nav-banner{
+        grid-template-columns: 1fr; 
+        grid-gap: 1em;
+    } */
+    .tutorial-container{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    
+
+    input[type = 'checkbox']{
+        /* Double-sized Checkboxes */
+        -ms-transform: scale(1.5); /* IE */
+        -moz-transform: scale(1.5); /* FF */
+        -webkit-transform: scale(1.5); /* Safari and Chrome */
+        -o-transform: scale(1.5); /* Opera */
+        padding: 10px;
+        margin-right: .5em;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    body{
+        font-size: 1em;
+    }
+    
+    .information-heading{
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .information-paragraph{
+        text-align: center;
+    }
+
+    .assignment-form-section{
+        width: 100%
+    }
+
+    input[type = 'checkbox']{
+        /* Double-sized Checkboxes */
+        -ms-transform: scale(1); /* IE */
+        -moz-transform: scale(1); /* FF */
+        -webkit-transform: scale(1); /* Safari and Chrome */
+        -o-transform: scale(1); /* Opera */
+        padding: 10px;
+        margin-right: .25em;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    body{
+        font-size: 0.75em;
+    } 
+
+    .text-box{
+        text-align: center;
+    }
+
+}
+
+

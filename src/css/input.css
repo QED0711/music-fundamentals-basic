@@ -1,0 +1,77 @@
+input, select, textarea, button{
+    border-radius: 4px;
+    border: none;
+
+    font-size: 1.5em;
+    
+    margin: 0.25em 0;
+
+    color: var(--dark-accent);
+}
+
+textarea{
+    display: block;
+    resize: none;
+    padding: .66em .5em;
+    min-height: 5em;
+    box-shadow: 2px 2px 10px var(--dark-accent);
+    color: var(--white-text);
+    font-size: 1em;
+    background-color: var(--dark-accent);
+}
+
+
+
+
+
+input[type="submit"], #assignment-container, button{
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid var(--dark-accent);
+    
+    padding: 0.25em;
+    margin: 1em;
+    box-shadow: 2px 2px 8px var(--dark-accent);
+    
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, #assignment-container, button:hover{
+    color: var(--highlight-color);
+    border: 2px solid var(--highlight-color);
+    box-shadow: 5px 5px 20px var(--dark-accent);
+}
+
+
+input[type = 'checkbox']{
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    padding: 10px;
+    margin-right: .5em;
+}
+
+
+
+
+
+input[type="text"], input[type="number"]{
+    box-shadow: 2px 2px 8px var(--dark-accent);
+    text-align: center;
+}
+
+select{
+    cursor: pointer;
+    box-shadow: 2px 2px 8px var(--dark-accent);
+}
+
+label{
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+
+.copy-text-button{
+    font-size: .75em;
+}
