@@ -5,9 +5,9 @@ class SignAndSubmit extends Component {
     
     constructor(props){
         super(props);
-        console.log(this.props.answer)
         this.state = {
-            signature: null
+            signature: null,
+            completionTime: Date.now()
         }
         this.setSignature = this.setSignature.bind(this);
     }
@@ -51,7 +51,13 @@ class SignAndSubmit extends Component {
                 {
                     !!this.state.signature
                     &&
-                    <DisplayToken studentName={this.state.signature} answer={this.props.answer} title={this.props.title}/>
+                    <DisplayToken 
+                        studentName={this.state.signature} 
+                        answer={this.props.answer} 
+                        title={this.props.title}
+                        startTime={this.props.startTime}
+                        completionTime={this.state.completionTime}
+                    />
                 }
 
             </div>

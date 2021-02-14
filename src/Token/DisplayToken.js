@@ -9,15 +9,19 @@ class DisplayToken extends Component {
         this.studentName = props.studentName;
         this.answer = props.answer;
         this.title = props.title;
+        this.startTime = props.startTime;
+        this.completionTime = props.completionTime;
 
     }
 
-    encryptData(studentName, answer){
+    encryptData(){
         let tokenData = {
-            studentName,
-            answer,
+            studentName: this.studentName,
+            answer: this.answer,
             title: this.title,
-            date: new Date()
+            date: new Date(),            
+            startTime: this.startTime,
+            completionTime: this.completionTime
         }
         console.log(tokenData);
         return cryptr.encrypt(JSON.stringify(tokenData));
@@ -35,7 +39,7 @@ class DisplayToken extends Component {
                 <p>
                     The token below may serve as proof of completion for this assignment.
                 </p>
-                <textarea id="encrypted-token" value={this.encryptData(this.studentName, this.answer)}></textarea>
+                <textarea id="encrypted-token" value={this.encryptData()}></textarea>
                 <button onClick={this.copyText}>Copy to Clipboard</button>
             </div>
         )
