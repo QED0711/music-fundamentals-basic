@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/arrow_right.8ef6a08c.svg"
   },
   {
-    "revision": "e46bc2c7d08a3abfe389",
+    "revision": "547583059de365397e21",
     "url": "/static/css/main.c89306d1.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/static/media/Roboto-Bold.e31fcf18.ttf"
   },
   {
-    "revision": "19ae2771400dcb0d6bcd",
-    "url": "/static/js/2.cdfa9271.chunk.js"
+    "revision": "543a21edf70b13fc1df5",
+    "url": "/static/js/2.1258105a.chunk.js"
   },
   {
     "revision": "65779ebcc35604a25c2ba77309c5b8af",
@@ -52,24 +52,24 @@ self.__precacheManifest = [
     "url": "/static/media/fa-solid-900.61969d43.woff"
   },
   {
-    "revision": "c39278f7abfc798a241551194f55e29f",
-    "url": "/static/media/fa-brands-400.c39278f7.ttf"
-  },
-  {
     "revision": "d9d17590c975aad1be0ddab673f9c769",
     "url": "/static/media/fa-brands-400.d9d17590.eot"
+  },
+  {
+    "revision": "c39278f7abfc798a241551194f55e29f",
+    "url": "/static/media/fa-brands-400.c39278f7.ttf"
   },
   {
     "revision": "e7e957c87c454bccaa3bf9fdaa6874f8",
     "url": "/static/media/fa-regular-400.e7e957c8.svg"
   },
   {
-    "revision": "b5596f4d339f99e3d69bc41be78db962",
-    "url": "/static/media/fa-solid-900.b5596f4d.eot"
-  },
-  {
     "revision": "b70cea0339374107969eb53e5b1f603f",
     "url": "/static/media/fa-solid-900.b70cea03.ttf"
+  },
+  {
+    "revision": "b5596f4d339f99e3d69bc41be78db962",
+    "url": "/static/media/fa-solid-900.b5596f4d.eot"
   },
   {
     "revision": "80533988ff5fecd5be26557d08ce8237",
@@ -84,8 +84,8 @@ self.__precacheManifest = [
     "url": "/static/media/arrow_left.11911410.svg"
   },
   {
-    "revision": "e46bc2c7d08a3abfe389",
-    "url": "/static/js/main.65ecf614.chunk.js"
+    "revision": "547583059de365397e21",
+    "url": "/static/js/main.70bcf980.chunk.js"
   },
   {
     "revision": "dfe56a876d0282555d1e2458e278060f",
@@ -164,11 +164,11 @@ self.__precacheManifest = [
     "url": "/static/media/Roboto-Medium.894a2ede.ttf"
   },
   {
-    "revision": "19ae2771400dcb0d6bcd",
+    "revision": "543a21edf70b13fc1df5",
     "url": "/static/css/2.0966bfe2.chunk.css"
   },
   {
-    "revision": "18d143d49c6abcafea071ca4a677d3a6",
+    "revision": "243cb2c6013fda27f3faaa9579ad6cfb",
     "url": "/index.html"
   }
 ];
