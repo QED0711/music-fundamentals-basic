@@ -14,7 +14,8 @@ class AssignmentContainer extends Component {
 
         this.state = {
             passed: false,
-            title: null
+            title: null,
+            startTime: Date.now()
         }
         this.passedAssignment = this.passedAssignment.bind(this);
         this.setTitle = this.setTitle.bind(this);
@@ -65,7 +66,7 @@ class AssignmentContainer extends Component {
                     {
                         this.state.passed
                         &&
-                        <SignAndSubmit answer={params.answer} title={this.state.title} />
+                        <SignAndSubmit answer={params.answer} title={this.state.title} startTime={this.state.startTime} />
                     }
                 </div>
             </section>
